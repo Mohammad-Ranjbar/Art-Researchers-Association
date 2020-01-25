@@ -1,32 +1,53 @@
-
-<header  style="font-size: large">
+<header style="font-size: large">
     <nav class=" navbar  navbar-dark fixed-top bg-dark">
 
+        <ul class="nav justify-content-end">
+            @if (auth()->check())
 
+                <li class="nav-item active">
+                    <div class="btn-group float-right">
+                        <img src="{{auth()->user()->image}}" style="height: 50px ; width: 50px ; border-radius: 50px;"
+                             data-toggle="dropdown">
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">پروفایل </a>
 
-                <ul class="nav justify-content-end">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/login">ورود</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/register">ثبت نام</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">لیست موضوعی</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">انجمن</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="#">اخبار</a>
-                    </li>
-                </ul>
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">انجمن پژوهشگران هنر </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('خروج') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </div>
                 </li>
+            @else
+                <li class="nav-item active">
+                    <a class="nav-link" href="/register">ثبت نام</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/login">ورود</a>
+                </li>
+            @endif
+            <li class="nav-item active">
+                <a class="nav-link" href="/list">لیست موضوعی</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">انجمن</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#">اخبار</a>
+            </li>
+        </ul>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">انجمن پژوهشگران هنر </a>
+            </li>
 
-            </ul>
+        </ul>
 
         <ul class="nav ">
             <li class="nav-item">
