@@ -5,9 +5,9 @@
             @if (auth()->check())
 
                 <li class="nav-item active">
-                    <div class="btn-group float-right">
-                        <img src="{{auth()->user()->image}}" style="height: 50px ; width: 50px ; border-radius: 50px;"
-                             data-toggle="dropdown">
+                    <div class="dropdown  float-right " >
+                        <img class="dropdown-toggle" src="{{auth()->user()->image}}" style="height: 50px ; width: 50px ; border-radius: 50px;"
+                             data-toggle="dropdown" data-hover="dropdown">
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="#">پروفایل </a>
 
@@ -24,6 +24,7 @@
                         </div>
                     </div>
                 </li>
+
             @else
                 <li class="nav-item active">
                     <a class="nav-link" href="/register">ثبت نام</a>
@@ -33,7 +34,7 @@
                 </li>
             @endif
             <li class="nav-item active">
-                <a class="nav-link" href="/list">لیست موضوعی</a>
+                <a class="nav-link" href="/listBook">لیست موضوعی</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">انجمن</a>

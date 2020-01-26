@@ -11,6 +11,6 @@ class ListController extends Controller
     {
         $lists = ListBook::all();
 
-        return view('ListBook',compact('lists'));
+        return view('List',compact('lists'));
     }
 }
