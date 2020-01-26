@@ -6,7 +6,21 @@
             <p class="lead font-weight-normal" align="justify">
                 بوف کور مهمترین اثر صادق هدایت است. کتابی پر از نماد که از چنان عمق و محتوایی برخوردار است که با انواع مختلف تحلیل‌ها قابل بررسی هست. تا به حال نقدهای بسیاری، به ویژه در حوزه نقد روان‌شناسانه، از داستان بوف کور ارائه شده است. این اثر سمبولیک آنقدر عمیق است که هرکسی قادر به درک آن نیست و از دید خود آن را تفسیر می‌کند. کتاب‌های متعددی در شرح و تفسیر بوف کور نوشته شده است که هرکدام از دید همان نویسنده بوف کور را تفسیر می‌کند. شاید بتوان گفت «بوف کور» معروفترین و تنها داستان ایرانی است که هم طرفداران و عاشقان بسیار و هم در نزد بسیاری دیگر مطرود و منفور است.
             </p>
-            <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+
+            <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#comment">نظر خود را بنویسید</button>
+            <div id="comment" class="collapse">
+                <form action="" method="post" role="form">
+
+                    <div class="form-group">
+                        <label for=""></label>
+                        <textarea name="body" id="body" cols="100" rows="5"></textarea>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
         </div>
 
     </div>
