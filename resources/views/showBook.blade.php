@@ -12,6 +12,7 @@
     </div>
 
     <div class="container " align="right">
+        <h1>نظرات :</h1>
         <div class="media border p-3">
             <img src="1.jpg" alt="John Doe" class="ml-3 mt-3 rounded-circle" style="width:60px;">
             <div class="media-body" >

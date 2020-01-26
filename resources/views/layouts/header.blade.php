@@ -45,7 +45,7 @@
         </ul>
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link active" href="#">انجمن پژوهشگران هنر </a>
+                <a class="nav-link active" href="/">انجمن پژوهشگران هنر </a>
             </li>
 
         </ul>
