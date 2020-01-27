@@ -11,6 +11,6 @@ class ListBook extends Model
 
     public function books()
     {
-        return $this->hasMany(Book::class);
+        return $this->hasMany(Book::class,'list_id');
     }
 }

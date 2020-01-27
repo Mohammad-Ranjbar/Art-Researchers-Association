@@ -34,7 +34,7 @@
                 </li>
             @endif
             <li class="nav-item active">
-                <a class="nav-link" href="/listBook">لیست موضوعی</a>
+                <a class="nav-link" href="/list">لیست موضوعی</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">انجمن</a>

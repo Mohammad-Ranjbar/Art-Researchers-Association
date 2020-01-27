@@ -1,13 +1,18 @@
 @extends('layouts.app')
 @section ('content')
-    <div class="position-relative overflow-hidden p-3 p-md-2 m-md-3 text-center bg-light border border-dark">
+
+    <div class="position-relative overflow-hidden p-3 p-md-2 m-md-3 text-center bg-light border border-dark"
+         xmlns:height="http://www.w3.org/1999/xhtml">
         <div class="col-md-5 p-lg-5 mx-auto my-5">
-            <img class="rounded-circle mb-2" src="/1.jpg" style="width: 200px;height: 200px">
+            <img class="rounded-circle mb-2" src={{$book->image}} style="width: 200px; height: 200px">
+            <h1>{{$book->name}}</h1>
+            <h4>{{$book->publisher}}</h4>
             <p class="lead font-weight-normal" align="justify">
-                بوف کور مهمترین اثر صادق هدایت است. کتابی پر از نماد که از چنان عمق و محتوایی برخوردار است که با انواع مختلف تحلیل‌ها قابل بررسی هست. تا به حال نقدهای بسیاری، به ویژه در حوزه نقد روان‌شناسانه، از داستان بوف کور ارائه شده است. این اثر سمبولیک آنقدر عمیق است که هرکسی قادر به درک آن نیست و از دید خود آن را تفسیر می‌کند. کتاب‌های متعددی در شرح و تفسیر بوف کور نوشته شده است که هرکدام از دید همان نویسنده بوف کور را تفسیر می‌کند. شاید بتوان گفت «بوف کور» معروفترین و تنها داستان ایرانی است که هم طرفداران و عاشقان بسیار و هم در نزد بسیاری دیگر مطرود و منفور است.
+                {{$book->description}}
             </p>
 
-            <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#comment">نظر خود را بنویسید</button>
+            <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#comment">نظر خود را بنویسید
+            </button>
             <div id="comment" class="collapse">
                 <form action="" method="post" role="form">
 
@@ -15,8 +20,6 @@
                         <label for=""></label>
                         <textarea name="body" id="body" cols="100" rows="5"></textarea>
                     </div>
-
-
 
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -29,7 +32,7 @@
         <h1>نظرات :</h1>
         <div class="media border p-3">
             <img src="1.jpg" alt="John Doe" class="ml-3 mt-3 rounded-circle" style="width:60px;">
-            <div class="media-body" >
+            <div class="media-body">
                 <h4>John Doe </h4>
                 <p>Lorem ipsum...</p>
             </div>

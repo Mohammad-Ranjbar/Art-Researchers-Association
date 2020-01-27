@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'BookController@home');
 
 Auth::routes();
 
@@ -21,9 +19,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //list of book
 Route::get('/list', 'ListController@index');
-Route::get('/listBook', function (){
-    return view('ListBook');
-});
-Route::get('/showBook', function (){
-    return view('showBook');
-});
+Route::get('/listBook/{id}', 'ListController@listBook');
+Route::get('/showBook/{id}','BookController@showBook' );
