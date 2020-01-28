@@ -15,6 +15,5 @@ $factory->define(Book::class, function (Faker $faker) {
         'image'       => '/1.jpg',
         'list_id'     => factory(ListBook::class),
         'user_id'     => factory(User::class),
-        'author_id'   => factory(\App\Author::class),
     ];
 });

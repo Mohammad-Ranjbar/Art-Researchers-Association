@@ -8,14 +8,14 @@ class Book extends Model
 {
     protected $fillable = ['name', ' publisher', 'image'];
 
-    public function listbook()
+    public function list()
     {
         return $this->belongsTo(ListBook::class);
     }
 
-    public function author()
+    public function authors()
     {
-        return $this->belongsTo(Author::class);
+        return $this->hasMany(Author::class);
     }
 
     public function user()

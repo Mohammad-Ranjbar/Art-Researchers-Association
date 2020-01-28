@@ -15,13 +15,12 @@ class CreateBooksTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name')->unique();
+            $table->string('name');
             $table->string('publisher');
             $table->text('description');
             $table->string('image')->default('/book.png');
-            $table->bigInteger('author_id');
-            $table->bigInteger('list_id');
-            $table->bigInteger('user_id');
+            $table->unsignedBigInteger('list_id')->index();
+            $table->unsignedBigInteger('user_id')->index();
             $table->timestamps();
         });
     }

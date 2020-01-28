@@ -39,13 +39,21 @@
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                             </div>
-                            <h3 class="mb-0">
+                            <h5 class="mb-0">
                                 <a class="text-dark" href="#">{{$book->name}}</a>
-                            </h3>
+                            </h5>
                             <div class="mb-1 text-muted">Nov 12</div>
-                            <p class="card-text mb-auto">
-                                {{$book->author->name}}
-                            </p>
+
+                                    <smal>نویسندگان :</smal>
+                            <div class="float-right">
+                                <ul >
+                                    @foreach($book->authors as $author)
+                                        <li>
+                                            {{$author->name}}
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
                             <a href="/showBook/{{$book->id}}">بیشتر</a>
                         </div>
                         <a href="/showBook/{{$book->id}}">

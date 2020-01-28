@@ -10,19 +10,20 @@
             <p class="lead font-weight-normal" align="justify">
                 {{$book->description}}
             </p>
+            <div>
+                <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#comment">نظر خود را بنویسید
+                </button>
+                <div id="comment" class="collapse">
+                    <form action="" method="post" role="form">
 
-            <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#comment">نظر خود را بنویسید
-            </button>
-            <div id="comment" class="collapse">
-                <form action="" method="post" role="form">
+                        <div class="form-group">
+                            <label for=""></label>
+                            <textarea name="body" id="body" cols="100" rows="5"></textarea>
+                        </div>
 
-                    <div class="form-group">
-                        <label for=""></label>
-                        <textarea name="body" id="body" cols="100" rows="5"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                        <button type="submit" class="btn btn-primary float-right">تایید</button>
+                    </form>
+                </div>
             </div>
         </div>
 
