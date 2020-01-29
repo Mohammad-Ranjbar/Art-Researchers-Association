@@ -17,6 +17,7 @@ class CreateBooksTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('publisher');
+            $table->string('author');
             $table->text('description');
             $table->string('image')->default('/book.png');
             $table->unsignedBigInteger('list_id')->index();

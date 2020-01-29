@@ -15,10 +15,44 @@
                     رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات
                     ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
                 </p>
-                <p>
-                    <a href="#" class="btn btn-primary my-2">Main call to action</a>
-                    <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-                </p>
+
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal
+                </button>
+
+                <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Modal Header</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/list/store" method="post" role="form">
+                                    @csrf
+                                    <div class="form-group">
+                                        <label for="name"></label>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="نام دسته">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description"></label>
+                                        <input type="text" class="form-control" name="description" id="description"
+                                               placeholder="توضیحات دسته">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -27,11 +61,12 @@
 
                 <div class="row">
                     @foreach($lists as $list)
-                        <div class="col-md-4" >
+                        <div class="col-md-4">
                             <div class="card mb-4 box-shadow ">
                                 <img class="card-img-top" src="/1.jpg" alt="Card image cap">
-                                <div class="card-body">
-                                   <h3 dir="rtl" align="right">{{$list->name}}</h3>
+                                <div class="card-body" align="right">
+
+                                    <h3 dir="rtl" align="right">{{$list->name}}</h3>
                                     <p class="card-text">{{$list->description}}</p>
 
                                     <div class="d-flex justify-content-between align-items-center">

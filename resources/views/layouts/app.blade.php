@@ -22,6 +22,7 @@
 </head>
 <body dir="rtl">
     @include ('layouts.header')
+
     <main role="main" >
 
         @yield ('content')

@@ -12,12 +12,22 @@ class ListController extends Controller
     {
         $lists = ListBook::all();
 
-        return view('List',compact('lists'));
+        return view('List', compact('lists'));
     }
+
     public function listBook($id)
     {
-        $listBook = ListBook::query()->find($id);
-        $books = $listBook->books;
-        return view('listBook',compact('books'));
+        $list = ListBook::query()->find($id);
+
+
+        return view('listBook', compact('list'));
+    }
+
+    public function store(Request $request)
+    {
+
+        ListBook::query()->create($request->all());
+
+        return back();
     }
 }
