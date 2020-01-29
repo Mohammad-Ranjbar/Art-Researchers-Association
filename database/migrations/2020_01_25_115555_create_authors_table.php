@@ -15,7 +15,6 @@ class CreateAuthorsTable extends Migration
     {
         Schema::create('authors', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('book_id')->index();
             $table->string('name')->unique();
             $table->string('image')->default('/profile.png');
             $table->text('biography');
