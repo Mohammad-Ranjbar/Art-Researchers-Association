@@ -28,3 +28,7 @@ Route::get('/showBook/{id}','BookController@showBook' );
 //book url
 Route::post('/book/{id}/store', 'BookController@store');
 Route::get('/author/{name}', 'BookController@author');
+
+
+//comment url
+Route::post('/comment/book/{id}', 'CommentController@store');
