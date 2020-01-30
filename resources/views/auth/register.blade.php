@@ -42,7 +42,9 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('عکس') }}</label>
 
                             <div class="col-md-6 custom-file">
-                                <input id="image" type="file" class="form-control" name="image" >
+                                <input id="image" type="file" class="form-control" name="image" required
+                                       oninvalid="this.setCustomValidity('لطفا عکس پروفایل خود را وارد کنید .')"
+                                >
                             </div>
                         </div>
 

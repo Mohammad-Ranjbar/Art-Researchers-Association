@@ -6,7 +6,7 @@
 
                 <li class="nav-item active">
                     <div class="dropdown  float-right " >
-                        <img class="dropdown-toggle" src="/{{auth()->user()->image}}" style="height: 50px ; width: 50px ; border-radius: 50px;"
+                        <img class="dropdown-toggle" src="/user/{{auth()->user()->image}}" style="height: 50px ; width: 50px ; border-radius: 50px;"
                              data-toggle="dropdown" data-hover="dropdown">
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="#">پروفایل </a>

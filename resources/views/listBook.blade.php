@@ -18,7 +18,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Modal Header</h4>
+
                         </div>
                         <div class="modal-body">
                             <form action="/book/{{$list->id}}/store" method="post" role="form" enctype="multipart/form-data">
@@ -60,7 +60,7 @@
         <div class="product-device box-shadow d-none d-md-block"></div>
         <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
     </div>
-    <div class="container">
+    <div class="container my-5">
         <div class="row mb-2">
             @foreach($list->books as $book)
                 <div class="col-md-4">
@@ -86,7 +86,7 @@
                             <a href="/showBook/{{$book->id}}">بیشتر</a>
                         </div>
                         <a href="/showBook/{{$book->id}}">
-                            <img src="/1.jpg" class="card-img-right flex-auto d-none d-md-block"
+                            <img src="/book-image/{{$book->image}}" class="card-img-right flex-auto d-none d-md-block"
                                  style="height: 200px;width: 200px">
                         </a>
                     </div>

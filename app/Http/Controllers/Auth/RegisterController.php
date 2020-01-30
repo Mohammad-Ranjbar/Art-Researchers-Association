@@ -33,7 +33,7 @@ class RegisterController extends Controller
         $request   = request();
         $image     = $request->file('image');
         $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('/'), $imageName);
+        $image->move(public_path('/user/'), $imageName);
 
         return User::create([
             'name'     => $data['name'],

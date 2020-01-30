@@ -1,2 +1,0 @@
-@extends('')
-<div class=""></div>

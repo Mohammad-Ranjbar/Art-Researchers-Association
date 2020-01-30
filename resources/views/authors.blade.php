@@ -14,7 +14,7 @@
             @foreach($books as $book)
                 <div class="col-4">
                     <div class="media border border-dark">
-                        <img src="/{{$book->image}}" style="height: 150px;width: 150px;">
+                        <img src="/book/{{$book->image}}" style="height: 150px;width: 150px;">
                         <div class="media-body text-center m-3" align="right">
                             نام کتاب : <a href="/showBook/{{$book->id}}">{{$book->name}}</a>
                             <br>

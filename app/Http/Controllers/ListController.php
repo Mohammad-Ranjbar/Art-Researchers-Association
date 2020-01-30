@@ -19,14 +19,21 @@ class ListController extends Controller
     {
         $list = ListBook::query()->find($id);
 
-
         return view('listBook', compact('list'));
     }
 
     public function store(Request $request)
     {
 
-        ListBook::query()->create($request->all());
+        $file  = $request->file('image');
+        $image = time() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path('/list-image/'), $image);
+
+        ListBook::create([
+            'name'        => $request->name,
+            'description' => $request->description,
+            'image'       => $image,
+        ]);
 
         return back();
     }

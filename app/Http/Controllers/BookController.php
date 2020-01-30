@@ -26,7 +26,7 @@ class BookController extends Controller
     {
         $file  = $request->file('image');
         $image = time() . '.' . $file->getClientOriginalExtension();
-        $file->move(public_path('/'), $image);
+        $file->move(public_path('/book-image/'), $image);
 
         $book = Book::create([
             'name'        => $request->name,

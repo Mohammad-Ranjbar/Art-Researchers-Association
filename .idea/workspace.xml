@@ -3,11 +3,33 @@
   <component name="ChangeListManager">
     <list default="true" id="b7d38067-67f0-4a41-b871-7b49bd6b046e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BookController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ListBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ListBook.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_24_134719_create_lists_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_24_134719_create_lists_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1579976463.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1580311819.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1580320618.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1580320833.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1580320985.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1580321223.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1580321902.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1580322002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1580322025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1580322061.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1580322107.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1580323459.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1580323560.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/List.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/List.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/authors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/authors.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/profile.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listBook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listBook.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/showBook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/showBook.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +209,7 @@
       <workItem from="1580308616765" duration="861000" />
       <workItem from="1580311590599" duration="2106000" />
       <workItem from="1580314396320" duration="7412000" />
-      <workItem from="1580376374263" duration="4806000" />
+      <workItem from="1580376374263" duration="7519000" />
     </task>
     <servers />
   </component>

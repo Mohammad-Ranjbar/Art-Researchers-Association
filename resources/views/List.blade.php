@@ -17,7 +17,7 @@
                 </p>
 
                 <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">اضافه کردن دسته
                 </button>
 
                 <!-- Modal -->
@@ -28,14 +28,20 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Modal Header</h4>
+
                             </div>
                             <div class="modal-body">
-                                <form action="/list/store" method="post" role="form">
+                                <form action="/list/store" method="post" role="form" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
                                         <label for="name"></label>
                                         <input type="text" class="form-control" name="name" id="name" placeholder="نام دسته">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="image"></label>
+                                        <input type="file" class="form-control" name="image" id="image" required
+                                               oninvalid="this.setCustomValidity('لطفا عکس  را وارد کنید .')"
+                                        >
                                     </div>
                                     <div class="form-group">
                                         <label for="description"></label>
@@ -43,7 +49,7 @@
                                                placeholder="توضیحات دسته">
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary">تایید</button>
                                 </form>
                             </div>
 
@@ -56,14 +62,14 @@
             </div>
         </section>
 
-        <div class="album py-5 bg-light">
+        <div class="album py-5 ">
             <div class="container">
 
                 <div class="row">
                     @foreach($lists as $list)
                         <div class="col-md-4">
                             <div class="card mb-4 box-shadow ">
-                                <img class="card-img-top" src="/1.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="/list-image/{{$list->image}}" alt="Card image cap">
                                 <div class="card-body" align="right">
 
                                     <h3 dir="rtl" align="right">{{$list->name}}</h3>
@@ -76,11 +82,12 @@
                                             </a>
                                             <button type="button" class="btn btn-sm btn-outline-secondary" disabled>Edit</button>
                                         </div>
-                                        <small class="text-muted">9 mins</small>
+                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     @endforeach
                 </div>
             </div>
