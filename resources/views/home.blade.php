@@ -42,7 +42,6 @@
     </div>
 
     <div class="container marketing mt-4">
-
         <!-- Three columns of text below the carousel -->
         <div class="row">
             @foreach($books as $book)

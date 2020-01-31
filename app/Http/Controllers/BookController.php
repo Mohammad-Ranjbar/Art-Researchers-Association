@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
+    public function search()
+    {
+        $query = request('query');
+        $books = Book::where('name', 'like', '%' . $query . '%')->get();
+
+        return response()->json($books);
+    }
+
     public function home()
     {
         $books = Book::all()->take(3);

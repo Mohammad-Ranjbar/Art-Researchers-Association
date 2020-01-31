@@ -14,6 +14,7 @@ Route::get('/test',function (){
     return view('test');
 });
 Route::get('/', 'BookController@home');
+Route::get('/search', 'BookController@search');
 
 Auth::routes();
 
