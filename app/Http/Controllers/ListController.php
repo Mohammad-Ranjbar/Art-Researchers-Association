@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Book;
 use App\ListBook;
 use Illuminate\Http\Request;
+use Image;
 
 class ListController extends Controller
 {
@@ -27,8 +28,8 @@ class ListController extends Controller
 
         $file  = $request->file('image');
         $image = time() . '.' . $file->getClientOriginalExtension();
-        $file->move(public_path('/list-image/'), $image);
-
+        // $file->move(public_path('/list-image/'), $image);
+        Image::make($file)->resize(300,300)->save(public_path('/list-image/').$image,100);
         ListBook::create([
             'name'        => $request->name,
             'description' => $request->description,
