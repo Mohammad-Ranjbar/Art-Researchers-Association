@@ -1929,8 +1929,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'search',
   data: function data() {
@@ -37977,7 +37975,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { attrs: { align: "right" } },
+    { staticClass: "dropdown float-left", attrs: { align: "right" } },
     [
       _c("input", {
         directives: [
@@ -37988,8 +37986,12 @@ var render = function() {
             expression: "query"
           }
         ],
-        staticClass: "form-control",
-        attrs: { type: "text", placeholder: "جستجوی کتاب..." },
+        staticClass: "dropdown-toggle",
+        attrs: {
+          type: "text",
+          placeholder: "جستجوی کتاب...",
+          "data-toggle": "dropdown"
+        },
         domProps: { value: _vm.query },
         on: {
           keyup: _vm.autoComplete,
@@ -38002,49 +38004,41 @@ var render = function() {
         }
       }),
       _vm._v(" "),
-      _c("transition", { attrs: { name: "fade" } }, [
-        _vm.results.length
-          ? _c(
-              "div",
-              { staticClass: "panel-footer", attrs: { align: "right" } },
-              [
-                _c(
-                  "ul",
-                  _vm._l(_vm.results, function(result) {
-                    return _c(
-                      "li",
-                      {
-                        staticClass:
-                          "list-group-item border border-bottom border-dark ",
-                        attrs: { name: "fade" }
-                      },
-                      [
-                        _c("a", { attrs: { href: "/showBook/" + result.id } }, [
-                          _c("img", {
-                            staticClass: "ml-5",
-                            staticStyle: { height: "50px", width: "50px" },
-                            attrs: {
-                              src: "/book-image/" + result.image,
-                              alt: ""
-                            }
-                          }),
-                          _vm._v(
-                            "\n                       " +
-                              _vm._s(result.name) +
-                              "\n                    "
-                          )
+      _c(
+        "div",
+        {
+          staticClass: "dropdown-menu dropdown-menu-right",
+          attrs: { align: "right" }
+        },
+        [
+          _vm.results.length
+            ? _c(
+                "ul",
+                _vm._l(_vm.results, function(result) {
+                  return _c(
+                    "li",
+                    { staticClass: "dropdown-item ", attrs: { name: "fade" } },
+                    [
+                      _c("a", { attrs: { href: "/showBook/" + result.id } }, [
+                        _c("img", {
+                          staticClass: "float-right ml-4",
+                          staticStyle: { height: "50px", width: "50px" },
+                          attrs: { src: "/book-image/" + result.image, alt: "" }
+                        }),
+                        _vm._v(" "),
+                        _c("small", { staticClass: "float-left" }, [
+                          _vm._v(_vm._s(result.name))
                         ])
-                      ]
-                    )
-                  }),
-                  0
-                )
-              ]
-            )
-          : _vm._e()
-      ])
-    ],
-    1
+                      ])
+                    ]
+                  )
+                }),
+                0
+              )
+            : _vm._e()
+        ]
+      )
+    ]
   )
 }
 var staticRenderFns = []

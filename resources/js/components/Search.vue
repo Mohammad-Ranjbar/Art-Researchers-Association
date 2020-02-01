@@ -1,22 +1,20 @@
 <template>
 
-    <div align="right">
-        <input type="text" placeholder="جستجوی کتاب..." v-model="query" v-on:keyup="autoComplete" class="form-control">
+    <div class="dropdown float-left" align="right">
+        <input type="text" placeholder="جستجوی کتاب..." v-model="query" v-on:keyup="autoComplete" class="dropdown-toggle" data-toggle="dropdown">
 
-        <transition name="fade">
-            <div class="panel-footer" v-if="results.length" align="right">
-                <ul >
+        <div class="dropdown-menu dropdown-menu-right" align="right">
+            <ul  v-if="results.length" >
+                <li class="dropdown-item " v-for="result in results" name="fade" >
+                    <a :href="'/showBook/'+result.id">
+                        <img class="float-right ml-4" :src="'/book-image/'+result.image" alt="" style="height: 50px;width: 50px">
+                        <small class="float-left">{{ result.name }}</small>
+                    </a>
+                </li>
+            </ul>
 
-                    <li class="list-group-item border border-bottom border-dark " v-for="result in results" name="fade">
-                        <a :href="'/showBook/'+result.id">
-                            <img class="ml-5" :src="'/book-image/'+result.image" alt="" style="height: 50px;width: 50px">
-                           {{ result.name }}
-                        </a>
-                    </li>
+        </div>
 
-                </ul>
-            </div>
-        </transition>
     </div>
 
 </template>

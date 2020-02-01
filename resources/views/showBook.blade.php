@@ -33,10 +33,9 @@
 
     </div>
 
-    <div class="container " align="right">
+    <div class="container mb-5" align="right">
         <h1>نظرات :</h1>
         @foreach ($book->comments as $comment)
-
         <div class="media border p-3">
             <img src="/user/{{$comment->user->image}}" alt="John Doe" class="ml-3 mt-1 rounded-circle" style="width:80px;">
             <div class="media-body">
