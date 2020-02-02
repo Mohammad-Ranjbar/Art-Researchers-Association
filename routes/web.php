@@ -33,3 +33,8 @@ Route::get('/author/{name}', 'BookController@author');
 
 //comment url
 Route::post('/comment/book/{id}', 'CommentController@store');
+
+
+//news url
+
+Route::get('/news', 'NewsController@index');

@@ -1,5 +1,5 @@
 <header style="font-size: large">
-    <nav class=" navbar  navbar-dark fixed-top bg-dark">
+    <nav class=" navbar  navbar-dark fixed-top " style="background-color: #666666">
 
         <ul class="nav justify-content-end">
             @if (auth()->check())
