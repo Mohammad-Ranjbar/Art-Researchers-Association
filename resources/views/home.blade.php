@@ -7,6 +7,8 @@
             <li data-target="#demo" data-slide-to="1"></li>
             <li data-target="#demo" data-slide-to="2"></li>
         </ul>
+        @if ($news->first())
+
         <div class="carousel-inner">
 
             <div class="carousel-item active">
@@ -26,6 +28,7 @@
             @endforeach
 
         </div>
+        @endif
         <a class="carousel-control-prev" href="#demo" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>

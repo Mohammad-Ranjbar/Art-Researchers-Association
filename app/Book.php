@@ -22,6 +22,6 @@ class Book extends Model
 
     public function comments()
     {
-        return $this->hasMany(Comment::class);
+        return $this->morphMany('App\Comment', 'commentable');
     }
 }

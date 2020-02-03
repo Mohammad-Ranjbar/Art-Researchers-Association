@@ -6,7 +6,7 @@ use App\Book;
 use App\ListBook;
 use App\News;
 use Illuminate\Http\Request;
-
+use Image;
 class BookController extends Controller
 {
     public function search()
@@ -30,7 +30,7 @@ class BookController extends Controller
     public function showBook($id)
     {
         $book = Book::find($id);
-
+        // dd($book->comments()->with('user')->get());
         return view('showBook', compact('book'));
     }
 
@@ -38,7 +38,8 @@ class BookController extends Controller
     {
         $file  = $request->file('image');
         $image = time() . '.' . $file->getClientOriginalExtension();
-        $file->move(public_path('/book-image/'), $image);
+        Image::make($file)->resize(300,300)->save(public_path('/book-image/').$image,100);
+        // $file->move(public_path('/book-image/'), $image);
 
         $book = Book::create([
             'name'        => $request->name,

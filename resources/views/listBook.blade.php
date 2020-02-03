@@ -6,57 +6,60 @@
             <p class="lead font-weight-normal" align="center">
                 {{$list->description}}
             </p>
+        @if (auth()->check())
+
             <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal
-            </button>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal
+                </button>
 
-            <!-- Modal -->
-            <div id="myModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
+                <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
 
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                            </div>
+                            <div class="modal-body">
+                                <form action="/book/{{$list->id}}/store" method="post" role="form" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="form-group">
+                                        <label for="name"></label>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="نام">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="author"></label>
+                                        <input type="text" class="form-control" name="author" id="author" placeholder="نویسنده">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="publisher"></label>
+                                        <input type="text" class="form-control" name="publisher" id="publisher"
+                                               placeholder="ناشر">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description"></label>
+                                        <input type="text" class="form-control" name="description" id="description"
+                                               placeholder="توضیحات">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="image"></label>
+                                        <input type="file" class="form-control" name="image" id="image" required
+                                               oninvalid="this.setCustomValidity('لطفا عکس  را وارد کنید .')"
+                                        >
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
 
                         </div>
-                        <div class="modal-body">
-                            <form action="/book/{{$list->id}}/store" method="post" role="form" enctype="multipart/form-data">
-                                @csrf
-                                <div class="form-group">
-                                    <label for="name"></label>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="نام">
-                                </div>
-                                <div class="form-group">
-                                    <label for="author"></label>
-                                    <input type="text" class="form-control" name="author" id="author" placeholder="نویسنده">
-                                </div>
-                                <div class="form-group">
-                                    <label for="publisher"></label>
-                                    <input type="text" class="form-control" name="publisher" id="publisher"
-                                           placeholder="ناشر">
-                                </div>
-                                <div class="form-group">
-                                    <label for="description"></label>
-                                    <input type="text" class="form-control" name="description" id="description"
-                                           placeholder="توضیحات">
-                                </div>
-                                <div class="form-group">
-                                    <label for="image"></label>
-                                    <input type="file" class="form-control" name="image" id="image" required
-                                           oninvalid="this.setCustomValidity('لطفا عکس  را وارد کنید .')"
-                                    >
-                                </div>
-
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
-
 
                     </div>
-
                 </div>
-            </div>
+            @endif
+
         </div>
         <div class="product-device box-shadow d-none d-md-block"></div>
         <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
@@ -88,9 +91,9 @@
                             </h5>
                             <div class="mb-1 text-muted">Nov 12</div>
 
-                                    <smal>نویسنده :</smal>
+                            <smal>نویسنده :</smal>
                             <div class="float-right">
-                                            {{$book->author}}
+                                {{$book->author}}
                             </div>
                             <a href="/showBook/{{$book->id}}">بیشتر</a>
                         </div>

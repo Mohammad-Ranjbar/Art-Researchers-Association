@@ -32,15 +32,17 @@
                             <form action="/news" method="post" role="form" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <label for="title"></label>
+                                    <label for="title">عنوان خبر</label>
                                     <input type="text" class="form-control" name="title" id="title" placeholder="عنوان خبر">
                                 </div>
                                 <div class="form-group">
-                                    <label for="body"></label>
-                                    <input type="text" class="form-control" name="body" id="body" placeholder="متن خبر">
+                                    <label for="body">متن خبر</label>
+                                    <br>
+                                    <textarea name="body" id="body" cols="60" rows="10"></textarea>
+{{--                                    <input type="text" class="form-control" name="body" id="body" placeholder="متن خبر">--}}
                                 </div>
                                 <div class="form-group">
-                                    <label for="image"></label>
+                                    <label for="image">تصویر خبر</label>
                                     <input type="file" class="form-control" name="image" id="image" required
                                            oninvalid="this.setCustomValidity('لطفا عکس  را وارد کنید .')"
                                     >
@@ -61,7 +63,7 @@
             @foreach ($news as $new)
             <div class="col-12 mb-5">
                 <div class="card" align="right">
-                    <img class="card-img-top" src="/news-image/{{$new->image}}" style="height: 404px;width: 1108px">
+                    <img class="card-img-top " src="/news-image/{{$new->image}}" >
                     <div class="card-body">
                         <h2>{{$new->title}}</h2>
                         {{ Str::limit( $new->body ,200)}}

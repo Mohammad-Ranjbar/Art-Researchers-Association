@@ -4,21 +4,17 @@
 
         <section class="jumbotron text-center ">
             <div class="container">
-                <h1 class="jumbotron-heading mt-3">لورم ایپسوم</h1>
-                <p class="lead text-muted">
-                    لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی
-                    گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل
-                    ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن
-                    باشد. معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفا به مشتری
-                    یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد
-                    و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموما نویسنده متن نیستند و وظیفه
-                    رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات
-                    ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
+                <h1 class="jumbotron-heading mt-3">دسته بندی کتب</h1>
+                <p class="lead " align="justify">
+                    وقتی می‌خواهیم به دوستی کتاب هدیه بدهیم معمولا به این فکر می‌کنیم که چه نوع کتاب‌هایی را بیشتر می‌خواند یا ممکن است بپسندد. این پرسش، در واقع سوالی راجع به ژانر مورد علاقه‌ی او است. ژانر کتاب در ساده‌ترین حالت، قالبی را مشخص می‌کند که کتاب در آن قرار می‌گیرد. هر رمان در دسته‌ای مشخص با ویژگی‌هایی ملموس طبقه بندی می‌شود. در طول تاریخ چیدمان قفسه‌ی کتابخانه‌ها بر اساس همین قالب‌ها بوده و در کتابخانه‌های بزرگ به زیرژانرها هم توجه می‌شود. خواننده‌ی پیگیر رمان به راحتی می‌تواند این طبقه بندی را درباره‌ی کتاب‌هایی که خوانده است انجام دهد و احتمالا برایش سخت نباشد ژانر مورد علاقه‌ی خود را انتخاب کند. در این مطلب به طور خلاصه به معرفی انواع ژانرهای مختلف و نمونه‌هایی از هر کدام می‌پردازیم تا با آگاهی کامل‌تری به دسته بندی کتاب‌ها توجه کنیم و شاید هم مطلع شویم نویسنده‌ی محبوب‌مان در کدام قالب پررنگ‌تر عمل کرده است. محبوب‌ترین نویسندگان، نویسنده‌های ژانر هستند و خوانندگان عموما به این دسته بندی‌ها اهمیت می‌دهند.
                 </p>
 
                 <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">اضافه کردن دسته
-                </button>
+                @if (auth()->check())
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                        اضافه کردن دسته
+                    </button>
+                @endif
 
                 <!-- Modal -->
                 <div id="myModal" class="modal fade" role="dialog">
@@ -34,19 +30,19 @@
                                 <form action="/list/store" method="post" role="form" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
-                                        <label for="name"></label>
+                                        <label for="name">نام دسته</label>
                                         <input type="text" class="form-control" name="name" id="name" placeholder="نام دسته">
                                     </div>
                                     <div class="form-group">
-                                        <label for="image"></label>
+                                        <label for="description">توضیحات دسته</label>
+                                        <input type="text" class="form-control" name="description" id="description"
+                                               placeholder="توضیحات دسته">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="image">تصویر دسته </label>
                                         <input type="file" class="form-control" name="image" id="image" required
                                                oninvalid="this.setCustomValidity('لطفا عکس  را وارد کنید .')"
                                         >
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="description"></label>
-                                        <input type="text" class="form-control" name="description" id="description"
-                                               placeholder="توضیحات دسته">
                                     </div>
 
                                     <button type="submit" class="btn btn-primary">تایید</button>

@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section ('content')
 
-    <div class="position-relative overflow-hidden p-3 p-md-2 m-md-3 text-center bg-light border border-dark"
+    <div class="position-relative overflow-hidden p-3  text-center bg-light border border-dark"
          xmlns:height="http://www.w3.org/1999/xhtml">
         <div class="col-md-5 p-lg-5 mx-auto my-5">
-            <img class="rounded-circle mb-2" src="/book-image/{{$book->image}}" style="width: 200px; height: 200px">
+            <img class=" mb-2" src="/book-image/{{$book->image}}" >
             <h1 class="font-weight-bold">{{$book->name}}</h1>
             <a href="/author/{{$book->author}}"><h2>{{$book->author}}</h2></a>
             <h4>نشر {{$book->publisher}}</h4>
@@ -34,10 +34,11 @@
     </div>
 
     <div class="container mb-5" align="right">
-        <h1>نظرات :</h1>
+        <h1 class="my-4">نظرات :</h1>
         @foreach ($book->comments as $comment)
-        <div class="media border p-3">
-            <img src="/user/{{$comment->user->image}}" alt="John Doe" class="ml-3 mt-1 rounded-circle" style="width:80px;">
+        <div class="media border p-3" style="background-color: #F7F6F6">
+
+            <img src="/user/{{$comment->user->image}}"  class="ml-3 mt-1 rounded-circle" style="width:80px; height: 80px">
             <div class="media-body">
                 <h4>{{$comment->user->name}} </h4>
                 <p>{{$comment->body}}</p>

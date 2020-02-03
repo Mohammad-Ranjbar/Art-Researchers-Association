@@ -40,3 +40,4 @@ Route::post('/comment/book/{id}', 'CommentController@store');
 Route::get('/news', 'NewsController@index');
 Route::get('/news/{id}', 'NewsController@show');
 Route::post('/news', 'NewsController@store');
+Route::post('/news/comment/{id}', 'NewsController@comment');
