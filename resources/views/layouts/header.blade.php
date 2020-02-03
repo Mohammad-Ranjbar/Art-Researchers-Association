@@ -1,12 +1,13 @@
 <header style="font-size: large">
-    <nav class=" navbar  navbar-dark fixed-top " style="background-color: #666666">
+    <nav class=" navbar " style="background-color: #666666">
 
         <ul class="nav justify-content-end">
             @if (auth()->check())
 
                 <li class="nav-item active">
-                    <div class="dropdown  float-right " >
-                        <img class="dropdown-toggle" src="/user/{{auth()->user()->image}}" style="height: 50px ; width: 50px ; border-radius: 50px;"
+                    <div class="dropdown  float-right ">
+                        <img class="dropdown-toggle" src="/user/{{auth()->user()->image}}"
+                             style="height: 50px ; width: 50px ; border-radius: 50px;"
                              data-toggle="dropdown">
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="#">پروفایل </a>
@@ -40,26 +41,19 @@
                 <a class="nav-link" href="#">انجمن</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="#">اخبار</a>
+                <a class="nav-link " href="/news">اخبار</a>
             </li>
         </ul>
         <ul class="nav justify-content-center">
             <li class="nav-item">
                 <a class="nav-link active" href="/">انجمن پژوهشگران هنر </a>
             </li>
-
         </ul>
-
         <ul class="nav ">
             <li class="nav-item" id="app">
-{{--                <form class="form-inline mt-2 mt-md-0">--}}
-{{--                    <input class="form-control mr-sm-2" type="text" placeholder="جستجو ..." aria-label="Search">--}}
-{{--                    <button class="btn btn-outline-success my-2 my-sm-0 mr-1" type="submit">جستجو</button>--}}
-{{--                </form>--}}
-<search></search>
+                <search></search>
             </li>
 
         </ul>
-
     </nav>
 </header>

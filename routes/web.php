@@ -38,3 +38,5 @@ Route::post('/comment/book/{id}', 'CommentController@store');
 //news url
 
 Route::get('/news', 'NewsController@index');
+Route::get('/news/{id}', 'NewsController@show');
+Route::post('/news', 'NewsController@store');

@@ -1,36 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="demo" class="carousel slide" data-ride="carousel">
+    <div id="demo" class="carousel slide" data-ride="carousel" dir="ltr">
         <ul class="carousel-indicators">
             <li data-target="#demo" data-slide-to="0" class="active"></li>
             <li data-target="#demo" data-slide-to="1"></li>
             <li data-target="#demo" data-slide-to="2"></li>
         </ul>
         <div class="carousel-inner">
+
             <div class="carousel-item active">
-                <img src="/1.jpg"  width="100%" height="500">
+                <img src="/news-image/{{$news->first()->image}}"  width="100%" height="500">
                 <div class="carousel-caption">
-                    <h3>پرونده ادبیات</h3>
-                    <p>اندیشه مرگ نجاتمان می دهد</p>
+                    <h3>{{$news->first()->title}}</h3>
                 </div>
             </div>
+            @foreach ($news->except($news->first()->id) as $new)
+
             <div class="carousel-item">
-                <img src="/2.jpg"  width="100%" height="500">
+                <img src="/news-image/{{$new->image}}"  width="100%" height="500">
                 <div class="carousel-caption">
-                    <h3>زبان و ادبیات فارسی</h3>
-                    <p>نهمین همایش ملی زبان و ادبیات پارسی</p>
+                    <h3>{{$new->title}}</h3>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="/3.jpg"  width="100%" height="500">
-                <div class="carousel-caption">
-                    <mark>
-                        <h3 class="bg-transparent">مجتبی مینوی</h3>
-                        <p>نگاهی به زندگی و آثار وی</p>
-                    </mark>
-                </div>
-            </div>
+            @endforeach
+
         </div>
         <a class="carousel-control-prev" href="#demo" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
@@ -43,9 +37,10 @@
 
     <div class="container marketing mt-4">
         <!-- Three columns of text below the carousel -->
+            <h1 class="mb-4" align="center">جدید ترین کتاب ها</h1>
         <div class="row">
             @foreach($books as $book)
-            <div class="col-4 border border-dark mx-1" align="center">
+            <div class="col-4  " align="center">
                 <img class="rounded-circle" src="/book-image/{{$book->image}}" alt="Generic placeholder image" width="140" height="140">
                 <h2 class="mt-1">{{$book->name}}</h2>
                 <p>{{$book->description}}</p>
@@ -58,6 +53,7 @@
 
 
         <!-- START THE FEATURETTES -->
+        <h1 class="mb-4 border" align="center">جدید ترین گفتگو ها</h1>
 
         <hr class="featurette-divider">
 

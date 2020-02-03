@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Book;
 use App\ListBook;
+use App\News;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -20,7 +21,10 @@ class BookController extends Controller
     {
         $books = Book::all()->take(3);
 
-        return view('home', compact('books'));
+        $news = News::orderBy('created_at', 'desc')->get()->take(3);
+
+        return view('home', compact('books','news'));
+
     }
 
     public function showBook($id)

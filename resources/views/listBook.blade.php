@@ -43,8 +43,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="image"></label>
-                                    <input type="file" class="form-control" name="image" id="image"
-                                           placeholder="تضویر">
+                                    <input type="file" class="form-control" name="image" id="image" required
+                                           oninvalid="this.setCustomValidity('لطفا عکس  را وارد کنید .')"
+                                    >
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -61,6 +62,14 @@
         <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
     </div>
     <div class="container my-5">
+        @if (session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="row mb-2">
             @foreach($list->books as $book)
                 <div class="col-md-4">

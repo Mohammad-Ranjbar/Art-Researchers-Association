@@ -15,54 +15,69 @@
             </p>
 
             <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">اضافه کردن دسته
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">اضافه کردن خبر
+
             </button>
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                        </div>
+                        <div class="modal-body">
+                            <form action="/news" method="post" role="form" enctype="multipart/form-data">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="title"></label>
+                                    <input type="text" class="form-control" name="title" id="title" placeholder="عنوان خبر">
+                                </div>
+                                <div class="form-group">
+                                    <label for="body"></label>
+                                    <input type="text" class="form-control" name="body" id="body" placeholder="متن خبر">
+                                </div>
+                                <div class="form-group">
+                                    <label for="image"></label>
+                                    <input type="file" class="form-control" name="image" id="image" required
+                                           oninvalid="this.setCustomValidity('لطفا عکس  را وارد کنید .')"
+                                    >
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">تایید</button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
     </section>
     <div class="container">
         <div class="row">
+            @foreach ($news as $new)
             <div class="col-12 mb-5">
                 <div class="card" align="right">
-                    <img class="card-img-top" src="/1.jpg" alt="">
+                    <img class="card-img-top" src="/news-image/{{$new->image}}" style="height: 404px;width: 1108px">
                     <div class="card-body">
-                        <h2>عنوان</h2>
-                     {{ Str::limit(  'Lorem ipsum dolor sit amet, consectetu adipisicing elit. Assumenda beatae corporis deserunt eligendi exercitationem, fugit non perspiciatis qui quibusdam ratione, similique soluta suscipit tempore? A doloribus ex reprehenderit sapiente vero!',200)}}
-                            <a href="#">
-                        <button class="btn btn-success ">
+                        <h2>{{$new->title}}</h2>
+                        {{ Str::limit( $new->body ,200)}}
+                        <br>
+                        <a href="/news/{{$new->id}}">
+                            <button class="btn btn-success ">
                                 بیشتر
-                        </button>
-                            </a>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-12">
-                <div class="card" align="right">
-                    <img class="card-img-top" src="/1.jpg" alt="">
-                    <div class="card-body">
-                        <h2>عنوان</h2>
-                     {{ Str::limit(  'Lorem ipsum dolor sit amet, consectetu adipisicing elit. Assumenda beatae corporis deserunt eligendi exercitationem, fugit non perspiciatis qui quibusdam ratione, similique soluta suscipit tempore? A doloribus ex reprehenderit sapiente vero!',200)}}
-                            <a href="#">
-                        <button class="btn btn-success ">
-                                بیشتر
-                        </button>
-                            </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="card" align="right">
-                    <img class="card-img-top" src="/1.jpg" alt="">
-                    <div class="card-body">
-                        <h2>عنوان</h2>
-                     {{ Str::limit(  'Lorem ipsum dolor sit amet, consectetu adipisicing elit. Assumenda beatae corporis deserunt eligendi exercitationem, fugit non perspiciatis qui quibusdam ratione, similique soluta suscipit tempore? A doloribus ex reprehenderit sapiente vero!',200)}}
-                            <a href="#">
-                        <button class="btn btn-success ">
-                                بیشتر
-                        </button>
-                            </a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+                <div class="pagination" >
         </div>
     </div>
+                    {{$news->links()}}
+                </div>
 @endsection
