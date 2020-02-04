@@ -38,7 +38,7 @@
                 <a class="nav-link" href="/list">لیست موضوعی</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">انجمن</a>
+                <a class="nav-link" href="/forum">انجمن</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link " href="/news">اخبار</a>

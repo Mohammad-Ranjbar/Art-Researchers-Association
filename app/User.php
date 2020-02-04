@@ -47,4 +47,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Book::class);
     }
+
+    public function forums()
+    {
+        return $this->hasMany(Forum::class);
+    }
 }

@@ -41,3 +41,11 @@ Route::get('/news', 'NewsController@index');
 Route::get('/news/{id}', 'NewsController@show');
 Route::post('/news', 'NewsController@store');
 Route::post('/news/comment/{id}', 'NewsController@comment');
+
+
+//forum url
+
+Route::get('/forum', 'ForumController@index');
+Route::get('/forum/{id}', 'ForumController@show');
+Route::post('/forum', 'ForumController@store');
+Route::post('/forum/comment/{id}', 'CommentController@forum');
