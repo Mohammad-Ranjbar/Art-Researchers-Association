@@ -31,4 +31,14 @@ class ForumController extends Controller
 
         return view('forumShow',compact('forum'));
     }
+
+    public function update(Request $request,$id)
+    {
+        Forum::find($id)->update([
+           'title' => $request->title,
+           'body' => $request->body
+        ]);
+
+        return back();
+    }
 }

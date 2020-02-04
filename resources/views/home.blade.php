@@ -14,7 +14,7 @@
             <div class="carousel-item active">
                 <img src="/news-image/{{$news->first()->image}}"  width="100%" height="500">
                 <div class="carousel-caption">
-                    <h3>{{$news->first()->title}}</h3>
+                    <h3 style="background-color: #b0d4f1">{{$news->first()->title}}</h3>
                 </div>
             </div>
             @foreach ($news->except($news->first()->id) as $new)
@@ -22,7 +22,7 @@
             <div class="carousel-item">
                 <img src="/news-image/{{$new->image}}"  width="100%" height="500">
                 <div class="carousel-caption">
-                    <h3>{{$new->title}}</h3>
+                    <h3 style="background-color: #b0d4f1">{{$new->title}}</h3>
                 </div>
             </div>
             @endforeach
@@ -56,48 +56,20 @@
 
 
         <!-- START THE FEATURETTES -->
-        <h1 class="mb-4 border" align="center">جدید ترین گفتگو ها</h1>
-
+        <h1 class="my-4 border-top" align="center">جدید ترین گفتگو ها</h1>
+        @foreach ($forums as $forum)
         <hr class="featurette-divider">
-
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                <h2 class="featurette-heading">{{$forum->title}}  <span class="text-muted">It'll blow your mind.</span></h2>
+                <p class="lead">{{$forum->body}}</p>
             </div>
-            <div class="col-md-5">
-                <img class="featurette-image img-fluid mx-auto" src="1.jpg" >
-            </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5 order-md-1">
-                <img class="featurette-image img-fluid mx-auto" src="1.jpg">
+            <div class="col-md-5 border " align="right">
+                <img class="featurette-image img-fluid mx-auto rounded-circle" src="/user/{{$forum->user->image}}" style="height: 100px;width: 200px">
             </div>
         </div>
+        @endforeach
 
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-                <img class="featurette-image img-fluid mx-auto" src="1.jpg">
-            </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- /END THE FEATURETTES -->
-
-    </div><!-- /.container -->
+    </div>
 
 @endsection

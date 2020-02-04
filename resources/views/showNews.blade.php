@@ -10,24 +10,6 @@
                 <p class="lead font-weight-normal float-right " align="justify" style="line-height:2.5em">
                     {{$news->body}}
                 </p>
-
-                <div>
-                    {{--                @if (auth()->check())--}}
-                    {{--                    <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#comment">نظر خود را بنویسید--}}
-                    {{--                    </button>--}}
-                    {{--                    <div id="comment" class="collapse">--}}
-                    {{--                        <form action="/comment/book/{{$book->id}}" method="post" role="form">--}}
-                    {{--                            @csrf--}}
-                    {{--                            <div class="form-group">--}}
-                    {{--                                <label for="body"></label>--}}
-                    {{--                                <textarea name="body" id="body" cols="100" rows="5" placeholder="نظر خود را بنویسید ..."></textarea>--}}
-                    {{--                            </div>--}}
-
-                    {{--                            <button type="submit" class="btn btn-primary float-right">تایید</button>--}}
-                    {{--                        </form>--}}
-                    {{--                    </div>--}}
-                    {{--                @endif--}}
-                </div>
             </div>
             <h4 class="float-right   m-5">تاریخ خبر : {{$news->created_at->diffForHumans()}}</h4>
         </div>
@@ -51,7 +33,7 @@
                     @csrf
                     <div class="form-group">
                         <label for="body">نظر خود را وارد کنید</label>
-                        <textarea name="body" id="body" cols="60" rows="5" placeholder="نظر خود را بنویسید ..."></textarea>
+                        <textarea name="body" id="body" cols="60" rows="5" placeholder="نظر خود را بنویسید ..." required></textarea>
 
                     </div>
                     @if (auth()->check())

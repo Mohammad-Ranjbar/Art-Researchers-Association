@@ -1,5 +1,5 @@
 <header style="font-size: large">
-    <nav class=" navbar " style="background-color: #666666">
+    <nav class=" navbar" style="background-color: #000000">
 
         <ul class="nav justify-content-end">
             @if (auth()->check())
@@ -10,7 +10,7 @@
                              style="height: 50px ; width: 50px ; border-radius: 50px;"
                              data-toggle="dropdown">
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#">پروفایل </a>
+                            <a class="dropdown-item" href="/profile">پروفایل </a>
 
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ route('logout') }}"

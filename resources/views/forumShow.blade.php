@@ -12,28 +12,10 @@
                 </p>
 
         <h4 class="border-top my-3" align="right">نوشته شده توسط : {{$forum->user->name}}</h4>
-        <h4 class=" my-3" align="right">{{$forum->created_at->diffForHumans()}}</h4>
+        <h4 class=" my-3" align="right">{{jdate($forum->created_at)->ago()}}</h4>
             </div>
         </section>
-        <div class="container" align="right">
-            <div class="row">
-                {{--                @foreach ($forums as $forum)--}}
 
-                {{--                    <div class="col-12 my-4">--}}
-                {{--                        <div class="card">--}}
-                {{--                            <div class="card-header">--}}
-                {{--                                <a href="/forum/{{$forum->id}}">--}}
-                {{--                                    {{$forum->title}}--}}
-                {{--                                </a>--}}
-                {{--                            </div>--}}
-                {{--                            <div class="card-body">--}}
-                {{--                                {{ Str::limit( $forum->body ,200)}}--}}
-                {{--                            </div>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-                {{--                @endforeach--}}
-            </div>
-        </div>
         <div class="row mx-2" align="right">
 
             <div class="col-5 ">
@@ -41,7 +23,7 @@
                     @csrf
                     <div class="form-group">
                         <label for="body">نظر خود را وارد کنید</label><br>
-                        <textarea name="body" id="body" cols="60" rows="5" placeholder="نظر خود را بنویسید ..."></textarea>
+                        <textarea name="body" id="body" cols="60" rows="5" placeholder="نظر خود را بنویسید ..." required></textarea>
 
                     </div>
                     @if (auth()->check())
@@ -66,6 +48,5 @@
                 @endforeach
             </div>
             </div>
-
     </main>
 @endsection

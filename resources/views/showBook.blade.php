@@ -21,7 +21,7 @@
                         @csrf
                         <div class="form-group">
                             <label for="body"></label>
-                            <textarea name="body" id="body" cols="100" rows="5" placeholder="نظر خود را بنویسید ..."></textarea>
+                            <textarea name="body" id="body" cols="100" rows="5" placeholder="نظر خود را بنویسید ..." required></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary float-right">تایید</button>

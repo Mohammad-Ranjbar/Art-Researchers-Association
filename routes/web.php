@@ -19,6 +19,7 @@ Route::get('/search', 'BookController@search');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', 'HomeController@profile')->name('profile');
 
 //list of book
 Route::get('/list', 'ListController@index');
@@ -49,3 +50,4 @@ Route::get('/forum', 'ForumController@index');
 Route::get('/forum/{id}', 'ForumController@show');
 Route::post('/forum', 'ForumController@store');
 Route::post('/forum/comment/{id}', 'CommentController@forum');
+Route::put('/forum/{id}', 'ForumController@update');

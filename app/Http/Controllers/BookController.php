@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Book;
+use App\Forum;
 use App\ListBook;
 use App\News;
 use Illuminate\Http\Request;
@@ -19,11 +20,11 @@ class BookController extends Controller
 
     public function home()
     {
-        $books = Book::all()->take(3);
+        $books = Book::orderBy('created_at', 'desc')->get()->take(3);
 
         $news = News::orderBy('created_at', 'desc')->get()->take(3);
-
-        return view('home', compact('books','news'));
+        $forums = Forum::orderBy('created_at', 'desc')->get()->take(3);
+        return view('home', compact('books','news','forums'));
 
     }
 

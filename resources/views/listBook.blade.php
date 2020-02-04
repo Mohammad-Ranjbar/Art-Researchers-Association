@@ -27,27 +27,26 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="name"></label>
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="نام">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="نام" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="author"></label>
-                                        <input type="text" class="form-control" name="author" id="author" placeholder="نویسنده">
+                                        <input type="text" class="form-control" name="author" id="author" placeholder="نویسنده"
+                                               required>
                                     </div>
                                     <div class="form-group">
                                         <label for="publisher"></label>
                                         <input type="text" class="form-control" name="publisher" id="publisher"
-                                               placeholder="ناشر">
+                                               placeholder="ناشر" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="description"></label>
                                         <input type="text" class="form-control" name="description" id="description"
-                                               placeholder="توضیحات">
+                                               placeholder="توضیحات" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="image"></label>
-                                        <input type="file" class="form-control" name="image" id="image" required
-                                               oninvalid="this.setCustomValidity('لطفا عکس  را وارد کنید .')"
-                                        >
+                                        <input type="file" class="form-control" name="image" id="image" required>
                                     </div>
 
                                     <button type="submit" class="btn btn-primary">Submit</button>

@@ -36,11 +36,11 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="title">عنوان</label>
-                                        <input type="text" class="form-control" name="title" id="title" placeholder="متن">
+                                        <input type="text" class="form-control" name="title" id="title" placeholder="متن" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="description">متن</label> <br>
-                                        <textarea name="body" id="body" cols="60" rows="10"></textarea>
+                                        <textarea name="body" id="body" cols="60" rows="10" required></textarea>
                                     </div>
 
 

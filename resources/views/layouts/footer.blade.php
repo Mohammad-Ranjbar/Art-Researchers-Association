@@ -102,8 +102,8 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    <div class="footer-copyright text-center py-3">طراحی شده توسط:
+        <a target="_blank" href="https://github.com/Mohammad-Ranjbar"> محمد جواد رنجبر</a>
     </div>
     <!-- Copyright -->
 

@@ -33,19 +33,17 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="title">عنوان خبر</label>
-                                    <input type="text" class="form-control" name="title" id="title" placeholder="عنوان خبر">
+                                    <input type="text" class="form-control" name="title" id="title" placeholder="عنوان خبر"
+                                           required>
                                 </div>
                                 <div class="form-group">
                                     <label for="body">متن خبر</label>
                                     <br>
-                                    <textarea name="body" id="body" cols="60" rows="10"></textarea>
-{{--                                    <input type="text" class="form-control" name="body" id="body" placeholder="متن خبر">--}}
+                                    <textarea name="body" id="body" cols="60" rows="10" required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="image">تصویر خبر</label>
-                                    <input type="file" class="form-control" name="image" id="image" required
-                                           oninvalid="this.setCustomValidity('لطفا عکس  را وارد کنید .')"
-                                    >
+                                    <input type="file" class="form-control" name="image" id="image" required>
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">تایید</button>
@@ -61,25 +59,25 @@
     <div class="container">
         <div class="row">
             @foreach ($news as $new)
-            <div class="col-12 mb-5">
-                <div class="card" align="right">
-                    <img class="card-img-top " src="/news-image/{{$new->image}}" >
-                    <div class="card-body">
-                        <h2>{{$new->title}}</h2>
-                        {{ Str::limit( $new->body ,200)}}
-                        <br>
-                        <a href="/news/{{$new->id}}">
-                            <button class="btn btn-success ">
-                                بیشتر
-                            </button>
-                        </a>
+                <div class="col-12 mb-5">
+                    <div class="card" align="right">
+                        <img class="card-img-top " src="/news-image/{{$new->image}}">
+                        <div class="card-body">
+                            <h2>{{$new->title}}</h2>
+                            {{ Str::limit( $new->body ,200)}}
+                            <br>
+                            <a href="/news/{{$new->id}}">
+                                <button class="btn btn-success ">
+                                    بیشتر
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
             @endforeach
-                <div class="pagination" >
+            <div class="pagination">
+            </div>
         </div>
+        {{$news->links()}}
     </div>
-                    {{$news->links()}}
-                </div>
 @endsection
