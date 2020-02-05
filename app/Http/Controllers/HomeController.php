@@ -31,4 +31,14 @@ class HomeController extends Controller
     {
         return view('profile');
     }
+
+    public function edit(Request $request)
+    {
+        auth()->user()->update([
+            'name'  => $request->name,
+            'email' => $request->email,
+        ]);
+
+        return back();
+    }
 }

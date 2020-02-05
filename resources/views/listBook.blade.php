@@ -63,7 +63,7 @@
         <div class="product-device box-shadow d-none d-md-block"></div>
         <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
     </div>
-    <div class="container my-5">
+    <div class=" m-5">
         @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -97,8 +97,7 @@
                             <a href="/showBook/{{$book->id}}">بیشتر</a>
                         </div>
                         <a href="/showBook/{{$book->id}}">
-                            <img src="/book-image/{{$book->image}}" class="card-img-right flex-auto d-none d-md-block"
-                                 style="height: 200px;width: 200px">
+                            <img src="/book-image/{{$book->image}}" class="card-img-right">
                         </a>
                     </div>
                 </div>

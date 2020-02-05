@@ -60,12 +60,12 @@
         @foreach ($forums as $forum)
         <hr class="featurette-divider">
         <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">{{$forum->title}}  <span class="text-muted">It'll blow your mind.</span></h2>
-                <p class="lead">{{$forum->body}}</p>
-            </div>
-            <div class="col-md-5 border " align="right">
+            <div class="col-md-5 border " align="center">
                 <img class="featurette-image img-fluid mx-auto rounded-circle" src="/user/{{$forum->user->image}}" style="height: 100px;width: 200px">
+            </div>
+            <div class="col-md-7" align="center">
+                <h2 class="featurette-heading">{{$forum->title}}  </h2>
+                <p class="lead">{{Str::limit($forum->body,50)}}</p>
             </div>
         </div>
         @endforeach

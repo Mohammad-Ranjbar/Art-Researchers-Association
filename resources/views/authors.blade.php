@@ -13,22 +13,42 @@
         <div class="row">
             @foreach($books as $book)
                 <div class="col-4">
-                    <div class="media border border-dark">
-                        <img src="/book/{{$book->image}}" style="height: 150px;width: 150px;">
-                        <div class="media-body text-center m-3" align="right">
-                            نام کتاب : <a href="/showBook/{{$book->id}}">{{$book->name}}</a>
-                            <br>
-                            انتشارات : {{$book->publisher}}
-                            <br>
-                            توضیحات : {{$book->description}}
-                            <br>
-                            معرفی شده توسط : {{$book->user->name}}
-                            <br>
+                    <div class="card  mb-4">
+                        <div class="card-img-top " align="right">
 
-                                دسته بندی : <a href="/listBook/{{$book->list->id}}">{{$book->list->name}}</a>
-
-
+                        <a href="/showBook/{{$book->id}}">
+                            <img  src="/book-image/{{$book->image}}" style="width: 350px">
+                        </a>
                         </div>
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <h5 >
+                                <a class="text-dark " href="#">{{$book->name}}</a>
+                            </h5>
+                            <smal>نویسنده :</smal>
+                            <div class="float-right">
+                                {{$book->author}}
+                            </div>
+                            <smal>انتشارات :</smal>
+                            <div class="float-right">
+                              {{$book->publisher}}
+                            </div>
+                            <smal>توضیحات :</smal>
+                            <div class="float-right">
+                                {{$book->description}}
+                            </div>
+                            <smal>دسته بندی :</smal>
+                            <div class="float-right">
+                                <a href="/listBook/{{$book->list->id}}">{{$book->list->name}}</a>
+                            </div>
+                            <smal>معرفی توسط :</smal>
+                            <div class="float-right">
+                                {{$book->user->name}}
+                            </div>
+
+                            <a href="/showBook/{{$book->id}}">بیشتر</a>
+                        </div>
+
+
                     </div>
                 </div>
             @endforeach

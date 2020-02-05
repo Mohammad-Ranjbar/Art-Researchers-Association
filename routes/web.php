@@ -15,7 +15,7 @@ Route::get('/test',function (){
 });
 Route::get('/', 'BookController@home');
 Route::get('/search', 'BookController@search');
-
+Route::put('/userEdit', 'HomeController@edit');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
