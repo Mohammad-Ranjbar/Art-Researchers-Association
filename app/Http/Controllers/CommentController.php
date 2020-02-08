@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Book;
+use App\Comment;
 use App\Forum;
 use Illuminate\Http\Request;
 
@@ -26,5 +27,30 @@ class CommentController extends Controller
         ]);
 
         return back()->with('success', 'نظر شما با موفقیت اضافه شد :)');
+    }
+
+    public function update(Request $request, $id)
+    {
+        Comment::find($id)->update([
+            'body' => $request->body,
+        ]);
+
+        return back();
+    }
+
+    public function commentDelete($id)
+    {
+        Comment::find($id)->delete();
+
+        return back();
+    }
+
+    public function forumDelete($id)
+    {
+        $forum = Forum::find($id);
+        $forum->comments()->where('commentable_id', $id)->delete();
+        $forum->delete();
+
+        return back();
     }
 }

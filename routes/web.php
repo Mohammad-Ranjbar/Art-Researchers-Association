@@ -11,7 +11,7 @@
 |
 */
 Route::get('/test',function (){
-    return view('test');
+    return view('layouts-dashboard.comments');
 });
 Route::get('/', 'BookController@home');
 Route::get('/search', 'BookController@search');
@@ -34,6 +34,9 @@ Route::get('/author/{name}', 'BookController@author');
 
 //comment url
 Route::post('/comment/book/{id}', 'CommentController@store');
+Route::put('/comment/{id}', 'CommentController@update');
+Route::delete('/comment/delete/{id}', 'CommentController@commentDelete');
+Route::delete('/forum/delete/{id}', 'CommentController@forumDelete');
 
 
 //news url
@@ -51,3 +54,16 @@ Route::get('/forum/{id}', 'ForumController@show');
 Route::post('/forum', 'ForumController@store');
 Route::post('/forum/comment/{id}', 'CommentController@forum');
 Route::put('/forum/{id}', 'ForumController@update');
+
+//dashboard url
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('layouts-dashboard.home');
+    });
+    Route::get('/dashboard/posts', function () {
+        return view('layouts-dashboard.posts');
+    });
+    Route::get('/dashboard/comments', function () {
+        return view('layouts-dashboard.comments');
+    });
+});

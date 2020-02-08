@@ -29,7 +29,7 @@ class HomeController extends Controller
 
     public function profile()
     {
-        return view('profile');
+        return view('layouts-dashboard.test');
     }
 
     public function edit(Request $request)
