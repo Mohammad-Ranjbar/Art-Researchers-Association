@@ -41,4 +41,8 @@ class HomeController extends Controller
 
         return back();
     }
+    public function show()
+    {
+        return view('layouts-dashboard.editProfile');
+    }
 }

@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7d38067-67f0-4a41-b871-7b49bd6b046e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts-dashboard/test.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Forum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Forum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/test.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts-dashboard/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts-dashboard/test.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -211,6 +206,7 @@
       <workItem from="1580964246959" duration="936000" />
       <workItem from="1581164003617" duration="4267000" />
       <workItem from="1581176846975" duration="935000" />
+      <workItem from="1581523311036" duration="1143000" />
     </task>
     <servers />
   </component>

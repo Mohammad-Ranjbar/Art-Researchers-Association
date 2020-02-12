@@ -25,7 +25,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/dashboard/edit">
+                            <a class="nav-link" href="/userEdit">
                                 <span data-feather="users"></span>
                                ویرایش اطلاعات شخصی
                             </a>
