@@ -18,6 +18,8 @@ Route::get('/search', 'BookController@search');
 Route::put('/userEdit', 'HomeController@edit');
 Route::get('/userEdit', 'HomeController@show');
 Route::get('/createPost', 'HomeController@createPost');
+Route::get('/emailAdmin', 'HomeController@emailAdmin');
+Route::post('/emailAdmin', 'HomeController@email');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -60,4 +60,21 @@ class HomeController extends Controller
     {
         return view('layouts-dashboard.createPost');
     }
+
+    public function emailAdmin()
+    {
+        return view('layouts-dashboard.emailAdmin');
+    }
+
+    public function email(Request $request)
+    {
+
+        Mail::send('email', ['body' => $request->body], function ($message) use ($request) {
+
+            $message->from($request->email, auth()->user()->name);
+            $message->to('mj.ranjbar.94@gmail.com', 'admin')->subject('پیام از طرف کاربر');
+        });
+
+        return back()->with('status', 'ایمیل شما به مدیر ارسال شد ');
+    }
 }

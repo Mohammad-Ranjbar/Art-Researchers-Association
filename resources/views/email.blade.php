@@ -7,6 +7,7 @@
     <title>محمد جواد</title>
 </head>
 <body>
-        <p>محمد جواد</p>
+    <p>محمد جواد</p>
+    <p>{{$body}}</p>
 </body>
 </html>

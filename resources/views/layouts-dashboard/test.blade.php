@@ -37,7 +37,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="emailAdmin">
                                 <span data-feather="layers" class="mx-2"></span>
                                 پیام به مدیر
                             </a>
