@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -29,7 +30,7 @@ class HomeController extends Controller
 
     public function profile()
     {
-        return view('layouts-dashboard.test');
+        return view('layouts-dashboard.home');
     }
 
     public function edit(Request $request)
@@ -38,11 +39,25 @@ class HomeController extends Controller
             'name'  => $request->name,
             'email' => $request->email,
         ]);
+        $subject = 'تغییر اطلاعات کاربری شما';
+        $message = 'اطلاعات شما تغییر یافته است.';
+
+        ini_set("smtp_port", 25);
+
+        Mail::send('email', [], function ($message) {
+            $message->to(auth()->user()->email)->subject('تغییرات پروفایل');
+        });
 
         return back();
     }
+
     public function show()
     {
         return view('layouts-dashboard.editProfile');
+    }
+
+    public function createPost()
+    {
+        return view('layouts-dashboard.createPost');
     }
 }

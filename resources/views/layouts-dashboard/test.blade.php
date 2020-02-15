@@ -4,42 +4,42 @@
     <div class="container-fluid" align="right">
         <div class="row">
             <nav class="col-md-2 d-none d-md-block bg-light sidebar ">
-                <div class="sidebar-sticky">
-                    <ul class="nav flex-column">
+                <div class="sidebar-sticky m-3">
+                    <ul class="nav flex-column ">
                         <li class="nav-item">
-                            <a class="nav-link active" href="/dashboard">
-                                <span data-feather="home"></span>
-                                داشبورد <span class="sr-only">(current)</span>
+                            <a class="nav-link" href="/dashboard">
+                                <span data-feather="home" class="mx-2"></span>
+                                داشبورد
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" >
                             <a class="nav-link" href="/dashboard/posts">
-                                <span data-feather="file"></span>
-                                پست های شما در انجمن
+                                <span data-feather="file" class="mx-2"></span>
+                                پست های انجمن
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/dashboard/comments">
-                                <span data-feather="shopping-cart"></span>
+                                <span data-feather="shopping-cart" class="mx-2"></span>
                                 کامنت های شما
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/userEdit">
-                                <span data-feather="users"></span>
-                               ویرایش اطلاعات شخصی
+                                <span data-feather="users" class="mx-2"></span>
+                               ویرایش اطلاعات
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/createPost">
+                                <span data-feather="bar-chart-2" class="mx-2"></span>
+                                ایجاد پست انجمن
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <span data-feather="bar-chart-2"></span>
-                                Reports
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="layers"></span>
-                                Integrations
+                                <span data-feather="layers" class="mx-2"></span>
+                                پیام به مدیر
                             </a>
                         </li>
                     </ul>
