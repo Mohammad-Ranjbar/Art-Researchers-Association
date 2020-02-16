@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/email.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts-dashboard/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts-dashboard/test.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,6 +212,7 @@
       <workItem from="1581528227884" duration="1395000" />
       <workItem from="1581570989806" duration="352000" />
       <workItem from="1581775642913" duration="3861000" />
+      <workItem from="1581852609935" duration="2032000" />
     </task>
     <servers />
   </component>

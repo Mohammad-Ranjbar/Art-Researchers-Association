@@ -8,6 +8,11 @@
 </head>
 <body>
     <p>محمد جواد</p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam culpa
+        dignissimos distinctio ducimus expedita fuga fugiat impedit magnam nemo odio,
+        omnis optio perspiciatis quod recusandae repellat sint unde vel?
+    </p>
     <p>{{$body}}</p>
 </body>
 </html>
