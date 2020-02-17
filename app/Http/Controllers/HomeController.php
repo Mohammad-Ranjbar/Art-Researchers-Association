@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendEmail;
 use App\Mail\AdminMessage;
 use App\News;
 use Illuminate\Http\Request;
@@ -70,7 +71,8 @@ class HomeController extends Controller
     public function email(Request $request)
     {
         $body = $request->body;
-        Mail::queue(new AdminMessage($body));
+        $name = auth()->user()->name;
+       SendEmail::dispatchNow($body,$name);
 
         return back()->with('success', 'ایمیل شما به مدیر ارسال شد ');
     }

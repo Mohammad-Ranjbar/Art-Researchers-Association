@@ -37,7 +37,7 @@
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
 
                                     </div>
-                                    <div class="modal-body">
+                                    <div class="modal-body" align="right">
                                         <form action="/forum/{{$forum->id}}" method="post" role="form">
                                             @csrf
                                             {{method_field('PUT')}}
@@ -49,7 +49,7 @@
                                             <div class="form-group">
                                                 <label for="body">بدنه</label>
                                                 <br>
-                                                <textarea name="body" id="body" cols="60"
+                                                <textarea name="body" id="body" cols="64"
                                                           rows="10">{{$forum->body}}</textarea>
                                             </div>
 

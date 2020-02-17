@@ -1,18 +1,1 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>محمد جواد</title>
-</head>
-<body>
-    <p>محمد جواد</p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam culpa
-        dignissimos distinctio ducimus expedita fuga fugiat impedit magnam nemo odio,
-        omnis optio perspiciatis quod recusandae repellat sint unde vel?
-    </p>
-    <p>{{$body}}</p>
-</body>
-</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head></head><body dir="rtl" ><style></style><spacer size="16"></spacer><container align="right" class="body-drip" style="border-top:8px solid #639"><row><columns><h4 class="text-center">ایمیل از طرف {{$name}}</h4></columns></row><hr><row><columns><p class="text-center">{{$body}}</p><center><button href="#" class="success">پاسخ به این پیام ↣</button></center></columns></row></container></body></html>
