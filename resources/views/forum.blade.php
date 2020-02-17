@@ -66,6 +66,13 @@
                         <a href="/forum/{{$forum->id}}">
                         {{$forum->title}}
                         </a>
+                        <small class="float-left">
+                            {{jdate($forum->created_at)->ago()}}
+                        </small>
+                        <br>
+                        <small>
+                            {{$forum->user->name}}
+                        </small>
                     </div>
                     <div class="card-body">
                         {{ Str::limit( $forum->body ,200)}}

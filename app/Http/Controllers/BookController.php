@@ -20,7 +20,7 @@ class BookController extends Controller
 
     public function home()
     {
-        $books = Book::orderBy('created_at', 'desc')->get()->take(3);
+        $books = Book::orderBy('created_at', 'desc')->get()->take(6);
 
         $news = News::orderBy('created_at', 'desc')->get()->take(3);
         $forums = Forum::orderBy('created_at', 'desc')->get()->take(3);
