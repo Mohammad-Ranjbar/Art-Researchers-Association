@@ -11,7 +11,7 @@
 |
 */
 Route::get('/test',function (){
-    return view('layouts-dashboard.comments');
+    return view('test');
 });
 Route::get('/', 'BookController@home');
 Route::get('/search', 'BookController@search');

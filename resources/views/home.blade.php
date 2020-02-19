@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div id="demo" class="carousel slide" data-ride="carousel" dir="ltr">
         <ul class="carousel-indicators">
             <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -41,10 +42,11 @@
     <div class="container marketing mt-4">
 
         <h1 class="mb-4" align="center">جدید ترین کتاب ها</h1>
-
-        <div class="row">
+        <i class="fas fa-chevron-circle-right"></i>
+        <div class="row man border border-dark" dir="ltr" align="center">
                 @foreach($books as $book)
-                    <div class="col-4" align="center">
+
+                    <div class="col-4 border" align="center">
                         <img class="rounded-circle" src="/book-image/{{$book->image}}" alt="Generic placeholder image" width="140"
                              height="140">
                         <h2 class="mt-1">{{$book->name}}</h2>
@@ -52,6 +54,7 @@
 
                         <p><a class="btn btn-secondary" href="/showBook/{{$book->id}}" role="button">مشاهده این کتاب</a></p>
                     </div>
+
                 @endforeach
         </div>
 
@@ -71,15 +74,23 @@
                 </div>
             </div>
         @endforeach
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
-
-    <script >
-	    $(document).ready(function(){
-		    $('.carousel').slick({
+    <script>
+	    $(document).ready(() =>
+		    $('.man').slick({
+                arrow:true,
 			    slidesToShow: 3,
-			    dots:true,
-			    centerMode: true,
-		    });
-	    });
+			    slidesToScroll: 3,
+			    dots: true,
+			    autoplay: true,
+			    speed: 300,
+			    prevArrow: $('.prev'),
+			    nextArrow: $('.next'),
+		    }),
+	    );
     </script>
+
+
 @endsection

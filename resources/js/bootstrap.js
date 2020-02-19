@@ -1,6 +1,6 @@
 window._ = require('lodash');
-import slik from 'slick-carousel'
-window.slik = slik;
+
+
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support

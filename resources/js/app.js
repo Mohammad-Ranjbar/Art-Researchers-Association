@@ -6,8 +6,11 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
-window.$=require('jquery');
+window.Vue  = require('vue');
+window.$    = require('jquery');
+window.slick=require('slick-carousel')
+require('jquery');
+require('slick-carousel');
 
 
 /**
@@ -22,6 +25,7 @@ window.$=require('jquery');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('Search', require('./components/Search.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
