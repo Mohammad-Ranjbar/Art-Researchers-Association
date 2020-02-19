@@ -36,12 +36,22 @@
     <div class="container mb-5" align="right">
         <h1 class="my-4">نظرات :</h1>
         @foreach ($book->comments as $comment)
-        <div class="media border p-3" style="background-color: #F7F6F6">
+        <div class="media border p-3 my-2" style="background-color: #F7F6F6">
 
             <img src="/user/{{$comment->user->image}}"  class="ml-3 mt-1 rounded-circle" style="width:80px; height: 80px">
             <div class="media-body">
                 <h4>{{$comment->user->name}} </h4>
                 <p>{{$comment->body}}</p>
+                <small>{{jdate($comment->created_at)->ago()}}</small>
+            </div>
+            <div class="btn-group-sm">
+
+                <button class="btn btn-outline-primary btn-sm">لایک</button>
+                @if (auth()->user()->id == $comment->user->id)
+
+                <button class="btn btn-outline-danger btn-sm">حذف</button>
+                @endif
+
             </div>
         </div>
         @endforeach

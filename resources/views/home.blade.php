@@ -42,12 +42,14 @@
     <div class="container marketing mt-4">
 
         <h1 class="mb-4" align="center">جدید ترین کتاب ها</h1>
-        <i class="fas fa-chevron-circle-right"></i>
-        <div class="row man border border-dark" dir="ltr" align="center">
+        <i class="fas fa-chevron-circle-right next"></i>
+        <i class="fas fa-chevron-circle-left prev"></i>
+        <div class="row man border border-dark " dir="ltr" align="center">
+
                 @foreach($books as $book)
 
                     <div class="col-4 border" align="center">
-                        <img class="rounded-circle" src="/book-image/{{$book->image}}" alt="Generic placeholder image" width="140"
+                        <img class="card-img-top" src="/book-image/{{$book->image}}" width="140"
                              height="140">
                         <h2 class="mt-1">{{$book->name}}</h2>
                         <p>{{$book->description}}</p>
@@ -56,6 +58,7 @@
                     </div>
 
                 @endforeach
+
         </div>
 
         <!-- START THE FEATURETTES -->
@@ -86,7 +89,7 @@
 			    dots: true,
 			    autoplay: true,
 			    speed: 300,
-			    prevArrow: $('.prev'),
+                prevArrow: $('.prev'),
 			    nextArrow: $('.next'),
 		    }),
 	    );
