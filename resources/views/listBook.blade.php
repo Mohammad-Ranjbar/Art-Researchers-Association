@@ -7,11 +7,10 @@
                 {{$list->description}}
             </p>
         @if (auth()->check())
-
             <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                    Open Modal
                 </button>
-
                 <!-- Modal -->
                 <div id="myModal" class="modal fade" role="dialog">
                     <div class="modal-dialog">
@@ -60,10 +59,18 @@
             @endif
 
         </div>
-        <div class="product-device box-shadow d-none d-md-block"></div>
-        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+
     </div>
-    <div class=" m-5">
+    <div class="float-right mx-3  btn-group">
+        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            مرتب سازی
+        </button>
+        <div class="dropdown-menu" align="right" dir="rtl">
+            <a class="dropdown-item" href="/listBook/{{$list->id}}?new=1">جدید ترین</a>
+            <a class="dropdown-item" href="/listBook/{{$list->id}}?favorite=1">محبوب ترین</a>
+        </div>
+    </div>
+    <div class="m-5">
         @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -88,14 +95,16 @@
                             <h5 class="mb-0">
                                 <a class="text-dark" href="#">{{$book->name}}</a>
                             </h5>
-                            <div class="mb-1 text-muted">Nov 12</div>
+
 
                             <smal>نویسنده :</smal>
                             <div class="float-right">
                                 {{$book->author}}
                             </div>
                             <a href="/showBook/{{$book->id}}">بیشتر</a>
+                            <div class="mb-1 text-muted pt-5">{{jdate($book->created_at)->ago()}}</div>
                         </div>
+
                         <a href="/showBook/{{$book->id}}">
                             <img src="/book-image/{{$book->image}}" class="card-img-right">
                         </a>

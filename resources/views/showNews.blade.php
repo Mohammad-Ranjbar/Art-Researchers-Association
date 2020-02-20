@@ -2,7 +2,6 @@
 @section ('content')
 
     <div class="position-relative overflow-hidden p-3  text-center " style="background-color: #eeeeee">
-
         <div class="row">
             <div class="col-12 p-lg-5 mx-auto my-1 ">
                 <img class=" mb-2" src="/news-image/{{$news->image}}" style="width: 800px; height: 400px">
@@ -15,7 +14,6 @@
         </div>
         <h4 class="float-right my-5">نوشته شده توسط : {{$news->user->name}}</h4>
     </div>
-
     <div class="container my-4" align="right">
 
         @if (session('success'))

@@ -27,8 +27,20 @@ class ListController extends Controller
 
     public function listBook($id)
     {
-        $list = ListBook::query()->find($id);
 
+
+        if (request('new')) {
+            $list = ListBook::whereId($id)->with(['books' => function($query){
+                $query->orderBy('created_at','desc');
+            }])->first();
+
+        }
+        // elseif (request('favorite')){
+        //     $list = ListBook::find($id)->orderBy('')
+        // }
+        else
+            $list = ListBook::find($id);
+// dd($list);
         return view('listBook', compact('list'));
     }
 
