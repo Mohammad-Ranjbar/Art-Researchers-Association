@@ -70,6 +70,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/comments', function () {
         return view('layouts-dashboard.comments');
     });
+    Route::get('/favoriteBook', function () {
+        return view('layouts-dashboard.favoriteBook');
+    });
+
 });
 
 //favorites

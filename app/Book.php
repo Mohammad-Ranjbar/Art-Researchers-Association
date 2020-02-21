@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     protected $fillable = ['name','publisher','description','author', 'image','user_id','list_id'];
+    protected $appends = ['favorite_book'];
 
     public function list()
     {
@@ -27,5 +28,19 @@ class Book extends Model
   public function favorite()
   {
       return $this->belongsTo(Favorite::class);
+  }
+
+  public function favoritebooks()
+  {
+      return $this->hasManyThrough(Book::class, Favorite::class);
+  }
+
+  public function getFavoriteBookAttribute()
+  {
+      if (auth()->user()->favorites->where('book_id',$this->id)->first()) {
+
+      return true ;
+      }
+      else return false;
   }
 }
