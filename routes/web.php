@@ -71,3 +71,8 @@ Route::middleware(['auth'])->group(function () {
         return view('layouts-dashboard.comments');
     });
 });
+
+//favorites
+
+Route::get('/favoriteBook/{id}', 'FavoriteController@favoriteBook');
+Route::get('/unfavoriteBook/{id}', 'FavoriteController@unfavoriteBook');

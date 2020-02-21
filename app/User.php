@@ -52,4 +52,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Forum::class);
     }
+    public function favorites()
+    {
+        return $this->belongsToMany(Favorite::class);
+    }
 }

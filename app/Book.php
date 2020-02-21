@@ -24,4 +24,8 @@ class Book extends Model
     {
         return $this->morphMany('App\Comment', 'commentable');
     }
+  public function favorite()
+  {
+      return $this->belongsTo(Favorite::class);
+  }
 }

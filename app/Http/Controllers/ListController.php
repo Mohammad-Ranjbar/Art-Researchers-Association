@@ -12,15 +12,12 @@ class ListController extends Controller
 {
     public function index()
     {
-        if ( ! Cache::has('lists')) {
+
 
             $lists = ListBook::all();
-            Cache::put('lists', $lists, 60);
 
-            return view('List', compact('lists'));
-        }
 
-        $lists = Cache::get('lists');
+
 
         return view('List', compact('lists'));
     }

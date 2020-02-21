@@ -13,6 +13,16 @@
             </p>
             <div>
                 @if (auth()->check())
+                    @if ( auth()->user()->favorites->first()->book_id == $book->id   )
+                        <a href="/unfavoriteBook/{{$book->id}}">
+                            <button class="btn btn-success mb-2">افزودن به علاقه مندی</button>
+                        </a>
+                    @else
+                        <a href="/favoriteBook/{{$book->id}}">
+                            <button class="btn btn-outline-success mb-2">افزودن به علاقه مندی</button>
+                        </a>
+                    @endif
+                    <br>
 
                     <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#comment">نظر خود را بنویسید
                     </button>

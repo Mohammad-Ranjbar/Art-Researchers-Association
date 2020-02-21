@@ -19,7 +19,6 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-
                             </div>
                             <div class="modal-body">
                                 <form action="/book/{{$list->id}}/store" method="post" role="form" enctype="multipart/form-data">
@@ -95,14 +94,12 @@
                             <h5 class="mb-0">
                                 <a class="text-dark" href="#">{{$book->name}}</a>
                             </h5>
-
-
                             <smal>نویسنده :</smal>
                             <div class="float-right">
                                 {{$book->author}}
                             </div>
                             <a href="/showBook/{{$book->id}}">بیشتر</a>
-                            <div class="mb-1 text-muted pt-5">{{jdate($book->created_at)->ago()}}</div>
+                            <div class="bottom pr-2 pb-2">{{jdate($book->created_at)->ago()}}</div>
                         </div>
 
                         <a href="/showBook/{{$book->id}}">
@@ -111,7 +108,6 @@
                     </div>
                 </div>
             @endforeach
-
         </div>
-    </div></div>
+
 @endsection

@@ -5,9 +5,14 @@ $body-bg: #ffffff;
 
 // Typography
 $font-family: 'Vazir', sans-serif;
+
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
-
+.bottom{
+    position:absolute;
+    bottom:0;
+    right:0;
+}
 // Colors
 $blue: #3490dc;
 $indigo: #6574cd;
