@@ -1,6 +1,8 @@
 @extends('layouts-dashboard.test')
 @section ('body')
-    <div class="row mb-2">
+        <h1>لیست کتاب های مورد علاقه </h1>
+    <div class="row my-4">
+
         @foreach(auth()->user()->favorite()->with('books')->get() as $favorite)
             @foreach ($favorite->books as $book)
                 <div class="col-md-4">
@@ -14,12 +16,26 @@
                                 {{$book->author}}
                             </div>
                             <a href="/showBook/{{$book->id}}">بیشتر</a>
-                            <div class="bottom pr-2 pb-2">{{jdate($book->created_at)->ago()}}</div>
+                            <div class="bottom pr-2 pb-2">
+                            @if ($book->favorite_book)
+                                <a href="/unfavoriteBook/{{$book->id}}">
+                                    <button class="btn btn-success mb-2">حذف از علاقه مندی</button>
+                                </a>
+                                <br>
+                            @else
+                                <a href="/favoriteBook/{{$book->id}}">
+                                    <button class="btn btn-outline-success mb-2">افزودن به علاقه مندی</button>
+                                </a>
+                                <br>
+                            @endif
+                                {{jdate($book->created_at)->ago()}}
+                            </div>
                         </div>
 
                         <a href="/showBook/{{$book->id}}">
                             <img src="/book-image/{{$book->image}}" class="card-img-right">
                         </a>
+
                     </div>
                 </div>
             @endforeach

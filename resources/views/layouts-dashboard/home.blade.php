@@ -16,8 +16,8 @@
                 <h4>{{auth()->user()->forums->count()}}</h4>
             </div>
             <div class="col-4 border my-3">
-                <h2>تعداد نظرات شما</h2><br>
-{{--                <h4>{{auth()->user()->forums}}</h4>--}}
+                <h3>تعداد کتاب های مورد علاقه شما</h3><br>
+                <h4>{{auth()->user()->favorite->count()}}</h4>
             </div>
         </div>
     </div>
