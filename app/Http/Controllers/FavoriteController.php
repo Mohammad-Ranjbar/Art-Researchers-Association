@@ -12,15 +12,17 @@ class FavoriteController extends Controller
     {
 
         Book::find($id)->favorites()->create([
-            'user_id' => auth()->user()->id
+            'user_id' => auth()->user()->id,
         ]);
 
         return back();
     }
+
     public function unfavoriteBook($id)
     {
-
-      auth()->user()->favorites()->with('books')->delete();
+        $unfavorite = Book::find($id)->favorites();
+        $unfavorite->delete();
+        $unfavorite->detach();
 
         return back();
     }
