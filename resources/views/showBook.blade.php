@@ -13,7 +13,7 @@
             </p>
             <div>
                 @if (auth()->check())
-                 
+
                     @if ($book->favorite_book)
                         <a href="/unfavoriteBook/{{$book->id}}">
                             <button class="btn btn-success mb-2">افزودن به علاقه مندی</button>

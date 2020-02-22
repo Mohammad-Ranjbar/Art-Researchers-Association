@@ -25,19 +25,17 @@ class Book extends Model
     {
         return $this->morphMany('App\Comment', 'commentable');
     }
-  public function favorite()
-  {
-      return $this->belongsTo(Favorite::class);
-  }
 
-  public function favoritebooks()
+
+  public function favorites()
   {
-      return $this->hasManyThrough(Book::class, Favorite::class);
+      return $this->belongsToMany(Favorite::class);
   }
 
   public function getFavoriteBookAttribute()
   {
-      if (auth()->user()->favorites->where('book_id',$this->id)->first()) {
+      // dd(auth()->user()->favorites);
+      if ($this->favorites->where('user_id',auth()->user()->id)->first()) {
 
       return true ;
       }

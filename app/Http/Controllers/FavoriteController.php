@@ -11,9 +11,9 @@ class FavoriteController extends Controller
     public function favoriteBook($id)
     {
 
-      auth()->user()->favorites()->create([
-          'book_id' => $id
-      ]);
+        Book::find($id)->favorites()->create([
+            'user_id' => auth()->user()->id
+        ]);
 
         return back();
     }

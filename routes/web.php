@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 Route::get('/test',function (){
     return view('test');
 });
@@ -71,6 +73,7 @@ Route::middleware(['auth'])->group(function () {
         return view('layouts-dashboard.comments');
     });
     Route::get('/favoriteBook', function () {
+
         return view('layouts-dashboard.favoriteBook');
     });
 

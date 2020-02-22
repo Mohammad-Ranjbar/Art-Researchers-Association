@@ -20,6 +20,7 @@ class User extends Authenticatable
         'password',
         'image',
     ];
+    protected $appends = ['favorite_books'];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -52,8 +53,18 @@ class User extends Authenticatable
     {
         return $this->hasMany(Forum::class);
     }
-    public function favorites()
+    public function favorite()
     {
-        return $this->belongsToMany(Favorite::class);
+        return $this->hasOne(Favorite::class);
+    }
+
+    public function getFavoriteBooksAttribute()
+    {
+        // dd(auth()->user()->favorites);
+        if ($this->with('favorites.books')->get()->first()->favorites->first()->books) {
+
+            return $this->with('favorites.books')->get()->first()->favorites->first()->books ;
+        }
+        else return false;
     }
 }
