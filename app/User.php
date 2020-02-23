@@ -58,9 +58,12 @@ class User extends Authenticatable
         return $this->hasOne(Favorite::class);
     }
 
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
     public function getFavoriteBooksAttribute()
     {
-        // dd(auth()->user()->favorites);
         if ($this->with('favorites.books')->get()->first()->favorites->first()->books) {
 
             return $this->with('favorites.books')->get()->first()->favorites->first()->books ;

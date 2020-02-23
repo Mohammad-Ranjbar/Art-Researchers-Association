@@ -83,3 +83,6 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/favoriteBook/{id}', 'FavoriteController@favoriteBook');
 Route::get('/unfavoriteBook/{id}', 'FavoriteController@unfavoriteBook');
+
+//like
+Route::get('/likeBook/{id}', 'LikeController@likeBook');

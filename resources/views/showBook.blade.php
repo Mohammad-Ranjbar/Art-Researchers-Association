@@ -56,11 +56,21 @@
                     <p>{{$comment->body}}</p>
                     <small>{{jdate($comment->created_at)->ago()}}</small>
                 </div>
+
                 @if (auth()->check())
-
                     <div class="btn-group-sm">
+                       
+                        @if (! $comment->likes->isEmpty() && $comment->likes->where('user_id',auth()->user()->id)->first())
+                            <a href="/unlikeBook/{{$comment->id}}">
+                                <button class="btn btn-primary btn-sm">لایک</button>
+                            </a>
+                        @else
+                            <a href="/likeBook/{{$comment->id}}">
 
-                        <button class="btn btn-outline-primary btn-sm">لایک</button>
+                                <button class="btn btn-outline-primary btn-sm">لایک</button>
+                            </a>
+
+                        @endif
                         @if ( auth()->user()->id == $comment->user->id)
 
                             <button class="btn btn-outline-danger btn-sm">حذف</button>

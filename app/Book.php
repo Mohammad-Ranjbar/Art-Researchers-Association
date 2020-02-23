@@ -6,15 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
-    protected $fillable = ['name','publisher','description','author', 'image','user_id','list_id'];
-    protected $appends = ['favorite_book'];
+    protected $fillable = ['name', 'publisher', 'description', 'author', 'image', 'user_id', 'list_id'];
+    protected $appends  = ['favorite_book'];
 
     public function list()
     {
         return $this->belongsTo(ListBook::class);
     }
-
-
 
     public function user()
     {
@@ -26,19 +24,19 @@ class Book extends Model
         return $this->morphMany('App\Comment', 'commentable');
     }
 
+    public function favorites()
+    {
+        return $this->belongsToMany(Favorite::class);
+    }
 
-  public function favorites()
-  {
-      return $this->belongsToMany(Favorite::class);
-  }
 
-  public function getFavoriteBookAttribute()
-  {
-      // dd(auth()->user()->favorites);
-      if ($this->favorites->where('user_id',auth()->user()->id)->first()) {
 
-      return true ;
-      }
-      else return false;
-  }
+    public function getFavoriteBookAttribute()
+    {
+        // dd(auth()->user()->favorites);
+        if ($this->favorites->where('user_id', auth()->user()->id)->first()) {
+
+            return true;
+        } else return false;
+    }
 }
