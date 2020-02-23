@@ -17,7 +17,7 @@
             </div>
             <div class="col-4 border my-3">
                 <h3>تعداد کتاب های مورد علاقه شما</h3><br>
-                <h4>{{auth()->user()->favorite->count()}}</h4>
+                <h4>{{auth()->user()->favorite && auth()->user()->favorite->count()}}</h4>
             </div>
         </div>
     </div>

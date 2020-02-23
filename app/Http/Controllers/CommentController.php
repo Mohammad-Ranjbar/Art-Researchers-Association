@@ -40,7 +40,9 @@ class CommentController extends Controller
 
     public function commentDelete($id)
     {
-        Comment::find($id)->delete();
+        $comment =  Comment::find($id);
+        $comment->likes()->delete();
+        $comment->delete();
 
         return back();
     }

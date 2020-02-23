@@ -72,9 +72,39 @@
 
                         @endif
                         @if ( auth()->user()->id == $comment->user->id)
+                                <button class="btn btn-sm btn-danger" data-toggle="modal"
+                                        data-target="#myModal-del-{{$comment->id}}">حذف
+                                </button>
+                                <!-- Modal -->
+                                <div id="myModal-del-{{$comment->id}}" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
 
-                            <button class="btn btn-outline-danger btn-sm">حذف</button>
-                        @endif
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+
+                                            <div class="modal-body">
+                                                <form action="/comment/delete/{{$comment->id}}" method="post" role="form">
+                                                    @csrf
+                                                    {{method_field('DELETE')}}
+                                                    <div class="form-group my-3">
+                                                        <h3 align="right">آیا از حذف نظر مطمعن هستید </h3>
+                                                    </div>
+                                                    <div class="btn-group">
+                                                        <button type="submit" class="btn btn-danger mx-1">تایید</button>
+                                                        <button type="button" data-dismiss="modal"
+                                                                class="btn btn-warning">انصراف
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                {{--                   end modal--}}
+
+                            @endif
 
                     </div>
                 @endif
