@@ -1,5 +1,6 @@
 // Fonts
 @import "~vazir-font/dist/font-face.css";
+@import "~vazir-font/dist/Farsi-Digits/font-face-FD.css";
 @import "~@fortawesome/fontawesome-free/css/all.css";
 //slik
 @import "~slick-carousel/slick/slick.css";
@@ -10,5 +11,5 @@
 @import '~bootstrap/scss/bootstrap';
 
 * {
-    font-family: Vazir;
+    font-family: "Vazir FD";
 }
