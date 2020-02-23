@@ -59,13 +59,13 @@
 
                 @if (auth()->check())
                     <div class="btn-group-sm">
-                       
+
                         @if (! $comment->likes->isEmpty() && $comment->likes->where('user_id',auth()->user()->id)->first())
-                            <a href="/unlikeBook/{{$comment->id}}">
+                            <a href="/unlikeComment/{{$comment->id}}">
                                 <button class="btn btn-primary btn-sm">لایک</button>
                             </a>
                         @else
-                            <a href="/likeBook/{{$comment->id}}">
+                            <a href="/likeComment/{{$comment->id}}">
 
                                 <button class="btn btn-outline-primary btn-sm">لایک</button>
                             </a>

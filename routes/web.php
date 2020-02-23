@@ -85,4 +85,5 @@ Route::get('/favoriteBook/{id}', 'FavoriteController@favoriteBook');
 Route::get('/unfavoriteBook/{id}', 'FavoriteController@unfavoriteBook');
 
 //like
-Route::get('/likeBook/{id}', 'LikeController@likeBook');
+Route::get('/likeComment/{id}', 'LikeController@likeComment');
+Route::get('/unlikeComment/{id}', 'LikeController@unlikeComment');
