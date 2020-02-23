@@ -3,12 +3,12 @@
 
         <ul class="nav justify-content-end">
             @if (auth()->check())
-
                 <li class="nav-item active">
                     <div class="dropdown  float-right ">
                         <img class="dropdown-toggle" src="/user/{{auth()->user()->image}}"
                              style="height: 50px ; width: 50px ; border-radius: 50px;"
                              data-toggle="dropdown">
+                        <span class="badge badge-light">4</span>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="/profile">پروفایل </a>
 

@@ -56,64 +56,6 @@
        url(/fonts/vendor/vazir-dist/Vazir-Black.woff?8f32bc13f6d38153304ade14dbd9c41d) format('woff'),
        url(/fonts/vendor/vazir-dist/Vazir-Black.ttf?27fe38dd94556dddf1a7c7a4574e460f) format('truetype');
   font-weight: 900;
-}@font-face {
-  font-family: Vazir FD;
-  src: url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-FD.eot?1e6f39237f180bf8403a0bb56d6a97d2);
-  src: url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-FD.eot?1e6f39237f180bf8403a0bb56d6a97d2?#iefix) format('embedded-opentype'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-FD.woff2?62931f3624a1f795c96bfa07bf92d6a3) format('woff2'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-FD.woff?367d91b676ba151405ebf9a86a18fb99) format('woff'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-FD.ttf?04d7a2e4425680153730f75fa9c661fe) format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: Vazir FD;
-  src: url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Bold-FD.eot?4ccdb73e9a4d0cb3ee8beb10ffa9dc4c);
-  src: url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Bold-FD.eot?4ccdb73e9a4d0cb3ee8beb10ffa9dc4c?#iefix) format('embedded-opentype'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Bold-FD.woff2?1f2c098e0ee3440f21fd69784f4cd130) format('woff2'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Bold-FD.woff?f0977cfa599351e79c398066664d25ac) format('woff'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Bold-FD.ttf?04c21eccd7d62407df3b8fbde77c8a9c) format('truetype');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: Vazir FD;
-  src: url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Thin-FD.eot?46697762f49efa8b40efbfd2af102771);
-  src: url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Thin-FD.eot?46697762f49efa8b40efbfd2af102771?#iefix) format('embedded-opentype'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Thin-FD.woff2?a963292cd2c5c2ff526528a467b7a40b) format('woff2'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Thin-FD.woff?89bc44cb9e924328dd61e4509bbfab99) format('woff'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Thin-FD.ttf?14b7f7692eec92ccd8a8993ba4314308) format('truetype');
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: Vazir FD;
-  src: url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Light-FD.eot?7ad68c44bd69485d5185e26ed9dbbc1b);
-  src: url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Light-FD.eot?7ad68c44bd69485d5185e26ed9dbbc1b?#iefix) format('embedded-opentype'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Light-FD.woff2?5db633791eaec749a2d9c1b49c62306e) format('woff2'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Light-FD.woff?947391967f641e67da172240d5fdc3d9) format('woff'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Light-FD.ttf?b460144416f9d5fb365e71f6fe03e141) format('truetype');
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: Vazir FD;
-  src: url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Medium-FD.eot?b7fef76f09167623f2713465836b1586);
-  src: url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Medium-FD.eot?b7fef76f09167623f2713465836b1586?#iefix) format('embedded-opentype'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Medium-FD.woff2?4771bb55eb51e5e15b59be285c0f0f1f) format('woff2'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Medium-FD.woff?71fa616600d0b2d3a588a10c1e3b7625) format('woff'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Medium-FD.ttf?c2a64969d5e8ccb697714381b64e8ca2) format('truetype');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: Vazir FD;
-  src: url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Black-FD.eot?4bff8ebb4425cb486b87894d32e99c13);
-  src: url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Black-FD.eot?4bff8ebb4425cb486b87894d32e99c13?#iefix) format('embedded-opentype'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Black-FD.woff2?acad220004c01e1d8c03ec8d5f59ab80) format('woff2'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Black-FD.woff?9e2c065e1c41092635d8650d520ce535) format('woff'),
-       url(/fonts/vendor/vazir-dist/Farsi-Digits/Vazir-Black-FD.ttf?2543c0f96f6bdd126124afcd80300c1b) format('truetype');
-  font-weight: 900;
 }/*!
  * Font Awesome Free 5.12.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -16257,5 +16199,9 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+* {
+  font-family: Vazir;
 }
 
