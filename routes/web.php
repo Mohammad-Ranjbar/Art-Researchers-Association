@@ -77,13 +77,13 @@ Route::middleware(['auth'])->group(function () {
         return view('layouts-dashboard.favoriteBook');
     });
 
+    //favorites
+
+    Route::get('/favoriteBook/{id}', 'FavoriteController@favoriteBook');
+    Route::get('/unfavoriteBook/{id}', 'FavoriteController@unfavoriteBook');
+
+    //like
+    Route::get('/likeComment/{id}', 'LikeController@likeComment');
+    Route::get('/unlikeComment/{id}', 'LikeController@unlikeComment');
 });
 
-//favorites
-
-Route::get('/favoriteBook/{id}', 'FavoriteController@favoriteBook');
-Route::get('/unfavoriteBook/{id}', 'FavoriteController@unfavoriteBook');
-
-//like
-Route::get('/likeComment/{id}', 'LikeController@likeComment');
-Route::get('/unlikeComment/{id}', 'LikeController@unlikeComment');
