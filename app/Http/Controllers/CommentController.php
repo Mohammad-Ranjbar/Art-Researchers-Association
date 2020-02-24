@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Book;
 use App\Comment;
 use App\Forum;
+use App\Notifications\CommentPost;
+use App\User;
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
@@ -21,11 +23,13 @@ class CommentController extends Controller
 
     public function forum(Request $request, $id)
     {
-        Forum::find($id)->comments()->create([
+        $forum = Forum::find($id);
+
+        $forum->comments()->create([
             'body'    => $request->body,
             'user_id' => auth()->user()->id,
         ]);
-
+        User::find($forum->user_id)->notify(new CommentPost(auth()->user()));
         return back()->with('success', 'نظر شما با موفقیت اضافه شد :)');
     }
 
