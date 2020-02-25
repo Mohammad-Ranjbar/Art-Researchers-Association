@@ -1,5 +1,5 @@
 <header style="font-size: large">
-    <nav class=" navbar" style="background-color: #000000">
+    <nav class=" navbar" style="background-color: #000000" dir="rtl">
 
         <ul class="nav justify-content-end">
             @if (auth()->check())
@@ -8,10 +8,25 @@
                         <img class="dropdown-toggle" src="/user/{{auth()->user()->image}}"
                              style="height: 50px ; width: 50px ; border-radius: 50px;"
                              data-toggle="dropdown">
-                        <span class="badge badge-light">4</span>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/profile">پروفایل </a>
+                        @if (auth()->user()->notifications->whereNull('read_at')->count() >=1)
+                            <span class="badge badge-light">
+                            {{auth()->user()->notifications->whereNull('read_at')->count() }}
+                             </span>
+                        @endif
 
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item " href="/profile">پروفایل </a>
+                            @if (auth()->user()->notifications->whereNull('read_at')->count() >= 1 )
+                                <ul>
+
+                                    @foreach (auth()->user()->notifications->whereNull('read_at') as $notification)
+                                        <li class="dropdown-item">
+                                            {{$notification->data['message']}}
+                                            {{$notification->markAsRead()}}
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            @endif
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();

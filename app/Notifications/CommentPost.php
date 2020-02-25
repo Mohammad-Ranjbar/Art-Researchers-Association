@@ -20,7 +20,7 @@ class CommentPost extends Notification
 
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['database'];
     }
 
     /**
@@ -37,16 +37,10 @@ class CommentPost extends Notification
             ->line('Thank you for using our application!');
     }
 
-    /**
-     * Get the array representation of the notification.
-     *
-     * @param mixed $notifiable
-     * @return array
-     */
     public function toArray($notifiable)
     {
         return [
-
+            'message' => $this->user->name . 'نظر داد به پست شما'
         ];
     }
 }
