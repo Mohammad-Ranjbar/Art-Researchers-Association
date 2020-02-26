@@ -29,7 +29,7 @@ class CommentController extends Controller
             'body'    => $request->body,
             'user_id' => auth()->user()->id,
         ]);
-        User::find($forum->user_id)->notify(new CommentPost(auth()->user()));
+        User::find($forum->user_id)->notify(new CommentPost(auth()->user(),$forum));
         return back()->with('success', 'نظر شما با موفقیت اضافه شد :)');
     }
 

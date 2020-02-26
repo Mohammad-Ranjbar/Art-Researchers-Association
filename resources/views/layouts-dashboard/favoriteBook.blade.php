@@ -1,6 +1,6 @@
 @extends('layouts-dashboard.test')
 @section ('body')
-        <h1>لیست کتاب های مورد علاقه </h1>
+        <h1 class="mt-3">لیست کتاب های مورد علاقه </h1>
     <div class="row my-4">
 
         @foreach(auth()->user()->favorite()->with('books')->get() as $favorite)

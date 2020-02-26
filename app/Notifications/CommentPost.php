@@ -12,10 +12,12 @@ class CommentPost extends Notification
 {
     use Queueable;
     public $user;
+    public $forum;
 
-    public function __construct($user)
+    public function __construct($user, $forum)
     {
-        $this->user = $user;
+        $this->user  = $user;
+        $this->forum = $forum;
     }
 
     public function via($notifiable)
@@ -40,7 +42,8 @@ class CommentPost extends Notification
     public function toArray($notifiable)
     {
         return [
-            'message' => $this->user->name . 'نظر داد به پست شما'
+            'message' => $this->user->name . ' به پست  ' . $this->forum->title . '  نظر داد.',
+            'url'     => '/forum/'. $this->forum->id,
         ];
     }
 }

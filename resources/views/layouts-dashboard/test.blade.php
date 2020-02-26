@@ -13,6 +13,12 @@
                                     داشبورد
                                 </a>
                             </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="/notifications">
+                                    <span data-feather="home" class="mx-2"></span>
+                                    اعلانات
+                                </a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/dashboard/posts">
                                     <span data-feather="file" class="mx-2"></span>

@@ -64,6 +64,10 @@ Route::middleware(['auth'])->group(function () {
 
         return view('layouts-dashboard.favoriteBook');
     });
+    Route::get('/notifications', function () {
+
+        return view('layouts-dashboard.notifications');
+    });
 
     //favorites
 
