@@ -25,11 +25,14 @@ class CommentController extends Controller
     {
         $forum = Forum::find($id);
 
-        $forum->comments()->create([
+      $comment = $forum->comments()->create([
             'body'    => $request->body,
             'user_id' => auth()->user()->id,
         ]);
-        User::find($forum->user_id)->notify(new CommentPost(auth()->user(),$forum));
+        if ($forum->user_id != auth()->user()->id) {
+            User::find($forum->user_id)->notify(new CommentPost(auth()->user(), $forum,$comment->id));
+        }
+
         return back()->with('success', 'نظر شما با موفقیت اضافه شد :)');
     }
 
@@ -44,7 +47,7 @@ class CommentController extends Controller
 
     public function commentDelete($id)
     {
-        $comment =  Comment::find($id);
+        $comment = Comment::find($id);
         $comment->likes()->delete();
         $comment->delete();
 
