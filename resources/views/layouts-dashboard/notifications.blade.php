@@ -22,9 +22,12 @@
                             <b>
                                 {{$notification->data['message']}}
                             </b>
-                            <a href="{{$notification->data['url']}}">
-                                <button class="btn btn-sm btn-secondary">مشاهده</button>
-                            </a>
+                            @isset($notification->data['url'])
+                                <a href="{{$notification->data['url']}}">
+                                    <button class="btn btn-sm btn-secondary">مشاهده</button>
+                                </a>
+                            @endisset
+
                         </td>
                         <td>{{jdate($notification->created_at)->ago()}}</td>
                     </tr>
