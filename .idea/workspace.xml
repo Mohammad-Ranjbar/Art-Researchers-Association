@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b7d38067-67f0-4a41-b871-7b49bd6b046e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Notifications/CommentPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/CommentPost.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts-dashboard/favoriteBook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts-dashboard/favoriteBook.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts-dashboard/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts-dashboard/test.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts-dashboard/notifications.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts-dashboard/notifications.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -229,6 +226,7 @@
       <workItem from="1582544596474" duration="5153000" />
       <workItem from="1582626701787" duration="502000" />
       <workItem from="1582710813663" duration="1832000" />
+      <workItem from="1582802697191" duration="1566000" />
     </task>
     <servers />
   </component>

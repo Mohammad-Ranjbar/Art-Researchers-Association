@@ -14,11 +14,16 @@
             </thead>
             <tbody>
                 @foreach(auth()->user()->notifications as $notification)
-                    <tr>
-                        <th scope="row">1</th>
+                    <tr class="border-bottom">
+                        <th scope="row"> {{ $loop->iteration }}</th>
                         <td>
-                            <a href="{{$notification->data['url']}}">
+                            <img src="/user/{{$notification->data['image']}}" class="rounded-circle" alt=""
+                                 style="height: 30px;width: 50px">
+                            <b>
                                 {{$notification->data['message']}}
+                            </b>
+                            <a href="{{$notification->data['url']}}">
+                                <button class="btn btn-sm btn-secondary">مشاهده</button>
                             </a>
                         </td>
                         <td>{{jdate($notification->created_at)->ago()}}</td>

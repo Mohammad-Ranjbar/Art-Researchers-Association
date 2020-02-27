@@ -43,7 +43,8 @@ class CommentPost extends Notification
     {
         return [
             'message' => $this->user->name . ' به پست  ' . $this->forum->title . '  نظر داد.',
-            'url'     => '/forum/'. $this->forum->id,
+            'image'   => $this->user->image,
+            'url'     => '/forum/' . $this->forum->id,
         ];
     }
 }
