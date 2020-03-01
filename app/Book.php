@@ -33,10 +33,11 @@ class Book extends Model
 
     public function getFavoriteBookAttribute()
     {
-        // dd(auth()->user()->favorites);
-        if ($this->favorites->where('user_id', auth()->user()->id)->first()) {
+      if (auth()->check()) {
+          if ($this->favorites->where('user_id', auth()->user()->id)->first()) {
 
-            return true;
-        } else return false;
+              return true;
+          } else return false;
+      }
     }
 }
