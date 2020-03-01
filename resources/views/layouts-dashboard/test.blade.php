@@ -6,52 +6,52 @@
             <div class="row">
                 <nav class="col-md-2 d-none d-md-block bg-light sidebar ">
                     <div class="sidebar-sticky m-3" style="height: 600px">
-                        <ul class="nav flex-column ">
-                            <li class="nav-item ">
+                        <ul class="nav flex-column list-group">
+                            <li class="nav-item list-group-item">
                                 <a class="nav-link " href="/dashboard">
-                                    <span data-feather="home" class="mx-2"></span>
+                                    <i class="fas fa-solar-panel"></i>
                                     داشبورد
                                 </a>
                             </li>
-                            <li class="nav-item ">
+                            <li class="nav-item list-group-item">
                                 <a class="nav-link " href="/notifications">
-                                    <span data-feather="home" class="mx-2"></span>
+                                    <i class="far fa-bell"></i>
                                     اعلانات
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item list-group-item">
                                 <a class="nav-link" href="/dashboard/posts">
-                                    <span data-feather="file" class="mx-2"></span>
+                                    <i class="fas fa-pen"></i>
                                     پست های انجمن
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item list-group-item">
                                 <a class="nav-link" href="/dashboard/comments">
-                                    <span data-feather="shopping-cart" class="mx-2"></span>
+                                    <i class="far fa-comments"></i>
                                     کامنت های شما
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item list-group-item">
                                 <a class="nav-link" href="/userEdit">
-                                    <span data-feather="users" class="mx-2"></span>
+                                    <i class="fas fa-user-edit"></i>
                                     ویرایش اطلاعات
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item list-group-item">
                                 <a class="nav-link" href="/createPost">
-                                    <span data-feather="bar-chart-2" class="mx-2"></span>
+                                    <i class="fas fa-feather"></i>
                                     ایجاد پست انجمن
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item list-group-item">
                                 <a class="nav-link" href="emailAdmin">
-                                    <span data-feather="layers" class="mx-2"></span>
+                                    <i class="far fa-comment-dots"></i>
                                     پیام به مدیر
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item list-group-item select">
                                 <a class="nav-link" href="favoriteBook">
-                                    <span data-feather="layers" class="mx-2"></span>
+                                    <i class="fas fa-heart-square"></i>
                                    کتاب های مورد علاقه
                                 </a>
                             </li>
