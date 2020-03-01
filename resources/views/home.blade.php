@@ -42,15 +42,15 @@
     <div class="container marketing mt-4">
 
         <h1 class="mb-4" align="center">جدید ترین کتاب ها</h1>
-        <i class="fas fa-chevron-circle-right next"></i>
+        <i class="fas fa-chevron-circle-right next" ></i>
         <i class="fas fa-chevron-circle-left prev"></i>
-        <div class="row man border border-dark " dir="ltr" align="center">
+        <div class="row p-3 man border border-dark " dir="ltr" align="center">
 
                 @foreach($books as $book)
 
-                    <div class="col-4 border" align="center">
+                    <div class="col-md-12 " align="center">
                         <img class="card-img-top" src="/book-image/{{$book->image}}" width="140"
-                             height="140">
+                             height="300">
                         <h2 class="mt-1">{{$book->name}}</h2>
                         <p>{{$book->description}}</p>
 
