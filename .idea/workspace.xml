@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7d38067-67f0-4a41-b871-7b49bd6b046e" name="Default Changelist" comment="" />
+    <list default="true" id="b7d38067-67f0-4a41-b871-7b49bd6b046e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,6 +231,7 @@
       <workItem from="1582901457139" duration="150000" />
       <workItem from="1583041919195" duration="3377000" />
       <workItem from="1583084680256" duration="1109000" />
+      <workItem from="1583913029955" duration="861000" />
     </task>
     <servers />
   </component>

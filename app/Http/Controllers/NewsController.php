@@ -43,8 +43,10 @@ class NewsController extends Controller
     public function show($id)
     {
         $news = News::find($id);
-
-        return view('showNews', compact('news'));
+        if (is_null($news)) {
+            return back();
+        } else
+            return view('showNews', compact('news'));
     }
 
     public function comment($id, Request $request)
