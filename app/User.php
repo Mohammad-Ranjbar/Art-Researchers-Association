@@ -19,6 +19,7 @@ class User extends Authenticatable
         'email',
         'password',
         'image',
+        'role'
     ];
     protected $appends = ['favorite_books'];
     /**

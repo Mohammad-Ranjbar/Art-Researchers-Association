@@ -4,6 +4,7 @@ use App\Comment;
 use App\Author;
 use App\ListBook;
 use App\Book;
+use App\User;
 use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
@@ -15,13 +16,11 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\User::class, 20)->create()->each(function ($user){
-            $user->books()->createMany(factory(Book::class,10)->make()->toArray())->each(function ($book){
-                $book->comments()->createMany(factory(Comment::class,5)->make()->toArray());
-                $book->authors()->createMany(factory(Author::class,2)->make()->toArray());
-                // $book->list()->save(factory(ListBook::class)->make());
-            });
-        });
-
+        User::create([
+            'name'     => 'admin',
+            'role'     => 'admin',
+            'email'    => 'admin@admin.admin',
+            'password' => bcrypt('admin'),
+        ]);
     }
 }

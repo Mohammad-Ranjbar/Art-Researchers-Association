@@ -27,6 +27,10 @@
                                     @endforeach
                                 </ul>
                             @endif
+                            @if (auth()->user()->role == 'admin')
+                                <a class="dropdown-item " href="/adminPanel">ناحیه مدیریت </a>
+                            @endif
+
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
