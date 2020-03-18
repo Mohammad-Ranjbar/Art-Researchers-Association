@@ -8,53 +8,32 @@
                     <div class="sidebar-sticky m-3" style="height: 600px">
                         <ul class="nav flex-column list-group">
                             <li class="nav-item list-group-item">
-                                <a class="nav-link " href="/dashboard">
+                                <a class="nav-link " href="/adminPanel/users">
                                     <i class="fas fa-solar-panel"></i>
-                                    داشبورد
+                                    کاربران
                                 </a>
                             </li>
                             <li class="nav-item list-group-item">
-                                <a class="nav-link " href="/notifications">
+                                <a class="nav-link " href="#">
                                     <i class="far fa-bell"></i>
                                     اعلانات
                                 </a>
                             </li>
                             <li class="nav-item list-group-item">
-                                <a class="nav-link" href="/dashboard/posts">
+                                <a class="nav-link" href="#">
                                     <i class="fas fa-pen"></i>
                                     پست های انجمن
                                 </a>
                             </li>
+
                             <li class="nav-item list-group-item">
-                                <a class="nav-link" href="/dashboard/comments">
-                                    <i class="far fa-comments"></i>
-                                    کامنت های شما
-                                </a>
-                            </li>
-                            <li class="nav-item list-group-item">
-                                <a class="nav-link" href="/userEdit">
-                                    <i class="fas fa-user-edit"></i>
-                                    ویرایش اطلاعات
-                                </a>
-                            </li>
-                            <li class="nav-item list-group-item">
-                                <a class="nav-link" href="/createPost">
+                                <a class="nav-link" href="#">
                                     <i class="fas fa-feather"></i>
                                     ایجاد پست انجمن
                                 </a>
                             </li>
-                            <li class="nav-item list-group-item">
-                                <a class="nav-link" href="emailAdmin">
-                                    <i class="far fa-comment-dots"></i>
-                                    پیام به مدیر
-                                </a>
-                            </li>
-                            <li class="nav-item list-group-item select">
-                                <a class="nav-link" href="favoriteBook">
-                                    <i class="fas fa-heart-square"></i>
-                                    کتاب های مورد علاقه
-                                </a>
-                            </li>
+
+
                         </ul>
 
                         {{--                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">--}}

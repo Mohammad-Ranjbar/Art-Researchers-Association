@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/test',function (){
+Route::get('/test', function () {
     return view('test');
 });
 Route::get('/', 'BookController@home');
@@ -19,12 +19,11 @@ Route::get('/profile', 'HomeController@profile')->name('profile');
 Route::get('/list', 'ListController@index');
 Route::post('/list/store', 'ListController@store');
 Route::get('/listBook/{id}', 'ListController@listBook');
-Route::get('/showBook/{id}','BookController@showBook' );
+Route::get('/showBook/{id}', 'BookController@showBook');
 
 //book url
 Route::post('/book/{id}/store', 'BookController@store');
 Route::get('/author/{name}', 'BookController@author');
-
 
 //comment url
 Route::post('/comment/book/{id}', 'CommentController@store');
@@ -32,14 +31,12 @@ Route::put('/comment/{id}', 'CommentController@update');
 Route::delete('/comment/delete/{id}', 'CommentController@commentDelete');
 Route::delete('/forum/delete/{id}', 'CommentController@forumDelete');
 
-
 //news url
 
 Route::get('/news', 'NewsController@index');
 Route::get('/news/{id}', 'NewsController@show');
 Route::post('/news', 'NewsController@store');
 Route::post('/news/comment/{id}', 'NewsController@comment');
-
 
 //forum url
 
@@ -79,3 +76,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/unlikeComment/{id}', 'LikeController@unlikeComment');
 });
 
+//admin panel
+Route::get('/adminPanel', function () {
+    return view('adminPanel.layout');
+});
+
+Route::get('/adminPanel/users', 'AdminController@admin_users');
