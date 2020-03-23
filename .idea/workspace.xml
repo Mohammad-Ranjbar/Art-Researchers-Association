@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7d38067-67f0-4a41-b871-7b49bd6b046e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/flower.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flower.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminPanel/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPanel/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPanel/users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPanel/users.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,33 +143,30 @@
   </component>
   <component name="ProjectId" id="1WqDtW14x7mtPUmVbh9dGMrGpRF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\flower\resources\views\layouts-dashboard" />
       <recent name="D:\flower\resources\views" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -236,7 +234,15 @@
       <workItem from="1583913029955" duration="1506000" />
       <workItem from="1584449444527" duration="3035000" />
       <workItem from="1584526155599" duration="2000" />
-      <workItem from="1584550340314" duration="1976000" />
+      <workItem from="1584550340314" duration="2158000" />
+      <workItem from="1584682260947" duration="15000" />
+      <workItem from="1584683659267" duration="88000" />
+      <workItem from="1584685599037" duration="230000" />
+      <workItem from="1584685857656" duration="545000" />
+      <workItem from="1584686416045" duration="95000" />
+      <workItem from="1584948042200" duration="1133000" />
+      <workItem from="1584949189509" duration="98000" />
+      <workItem from="1584949300303" duration="2048000" />
     </task>
     <servers />
   </component>
@@ -258,5 +264,31 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="714" y="389" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1584686404643">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="714" y="389" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584686404643" />
+    <state x="640" y="245" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584683688793">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="245" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584683688793" />
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1584686360269">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584686360269" />
+    <state x="38" y="90" width="1439" height="715" key="SettingsEditor" timestamp="1584949287739">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="38" y="90" width="1439" height="715" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584949287739" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1584948448001">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584948448001" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584951163113">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584951163113" />
   </component>
 </project>

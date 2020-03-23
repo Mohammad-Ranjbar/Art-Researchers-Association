@@ -77,8 +77,15 @@ Route::middleware(['auth'])->group(function () {
 });
 
 //admin panel
+/*
+ * ToDo : add middleware for routes
+ */
+
 Route::get('/adminPanel', function () {
     return view('adminPanel.layout');
 });
 
 Route::get('/adminPanel/users', 'AdminController@admin_users');
+
+Route::post('/user/{id}', 'AdminController@editUser');
+Route::delete('/user/{id}', 'AdminController@deleteUser');
