@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7d38067-67f0-4a41-b871-7b49bd6b046e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/flower.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flower.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminPanel/users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPanel/users.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPanel/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPanel/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +162,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\flower\resources\lang" />
       <recent name="D:\flower\resources\views\layouts-dashboard" />
       <recent name="D:\flower\resources\views" />
     </key>
@@ -243,6 +242,9 @@
       <workItem from="1584948042200" duration="1133000" />
       <workItem from="1584949189509" duration="98000" />
       <workItem from="1584949300303" duration="2048000" />
+      <workItem from="1587707620152" duration="945000" />
+      <workItem from="1587708579559" duration="20000" />
+      <workItem from="1588924906804" duration="57000" />
     </task>
     <servers />
   </component>
@@ -278,10 +280,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584686360269" />
-    <state x="38" y="90" width="1439" height="715" key="SettingsEditor" timestamp="1584949287739">
+    <state x="38" y="90" width="1439" height="715" key="SettingsEditor" timestamp="1587708565907">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="38" y="90" width="1439" height="715" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584949287739" />
+    <state x="38" y="90" width="1439" height="715" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587708565907" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1584948448001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
