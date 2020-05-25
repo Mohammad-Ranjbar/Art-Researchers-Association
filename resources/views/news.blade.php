@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('styles')
+
+@endsection
 @section ('content')
     <section class="jumbotron text-center ">
         <div class="container">
@@ -9,7 +12,8 @@
         @if (auth()->check())
 
             <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">اضافه کردن خبر
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">اضافه کردن
+                    خبر
 
                 </button>
                 <!-- Modal -->
@@ -27,7 +31,8 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="title">عنوان خبر</label>
-                                        <input type="text" class="form-control" name="title" id="title" placeholder="عنوان خبر"
+                                        <input type="text" class="form-control" name="title" id="title"
+                                               placeholder="عنوان خبر"
                                                required>
                                     </div>
                                     <div class="form-group">
@@ -52,6 +57,8 @@
         </div>
     </section>
     <div class="container">
+        <textarea name="editor" id="editor"></textarea>
+
         <div class="row">
             @foreach ($news as $new)
                 <div class="col-12 mb-5">
@@ -79,3 +86,16 @@
 
 @endsection
 
+@section('scripts')
+    <script src="{{asset('/ckeditor/ckeditor.js')}}"></script>
+    <script>
+        // CKEDITOR.replace( 'editor' );
+        CKEDITOR.replace('editor', {
+            language: 'fa',
+            filebrowserImageBrowseUrl: '{{asset('/laravel-filemanager?type=Images')}}',
+            filebrowserImageUploadUrl: '{{asset('/laravel-filemanager/upload?type=Images&_token=')}}',
+            filebrowserBrowseUrl: '{{asset('/laravel-filemanager?type=Files')}}',
+            filebrowserUploadUrl: '{{asset('/laravel-filemanager/upload?type=Files&_token=')}}'
+        });
+    </script>
+@endsection
