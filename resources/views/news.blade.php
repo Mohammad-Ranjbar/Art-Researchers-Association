@@ -89,9 +89,11 @@
 @section('scripts')
     <script src="{{asset('/ckeditor/ckeditor.js')}}"></script>
     <script>
-        // CKEDITOR.replace( 'editor' );
+
         CKEDITOR.replace('editor', {
             language: 'fa',
+            uiColor: '#9AB8F3',
+            customConfig: '{{asset('ckeditor/build-config.js')}}',
             filebrowserImageBrowseUrl: '{{asset('/laravel-filemanager?type=Images')}}',
             filebrowserImageUploadUrl: '{{asset('/laravel-filemanager/upload?type=Images&_token=')}}',
             filebrowserBrowseUrl: '{{asset('/laravel-filemanager?type=Files')}}',
