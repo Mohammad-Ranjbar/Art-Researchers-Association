@@ -57,8 +57,63 @@
         </div>
     </section>
     <div class="container">
-        <textarea name="editor" id="editor"></textarea>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">days</th>
 
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">#</th>
+                <td >"-disable" </td>
+            </tr>
+            <tr>
+                <th scope="row">#</th>
+                <td>{{jdate()->addDays(1)->format('Y-m-d')}}-"-disable"</td>
+            </tr>
+            <tr>
+                <th scope="row">#</th>
+                <td>{{jdate()->addDays(2)->format('Y-m-d')}}</td>
+            </tr>
+            <tr>
+                <th scope="row">#</th>
+                <td>{{jdate()->addDays(3)->format('Y-m-d')}}</td>
+            </tr>
+            <tr>
+                <th scope="row">#</th>
+                <td>{{jdate()->addDays(4)->format('Y-m-d')}}</td>
+            </tr>
+            <tr>
+                <th scope="row">#</th>
+                <td>{{jdate()->addDays(5)->format('Y-m-d')}}</td>
+            </tr>
+            <tr>
+                <th scope="row">#</th>
+                <td>{{jdate()->addDays(6)->format('Y-m-d')}}</td>
+            </tr>
+            </tbody>
+        </table>
+        {{--        <textarea name="editor" id="editor"></textarea>--}}
+{{--        <h1>add Days : {{jdate()->addDays(7)->format('Y-m-d')}}</h1>--}}
+{{--        <hr>--}}
+{{--        <h1>naxt week: {{jdate()->getNextWeek()->getNextWeek()->format('Y-m-d')}}</h1>--}}
+        <hr>
+{{--        <h1>naxt week: {{jdate()->format('Y-m-d')->getDayOfWeek()}}</h1>--}}
+        <hr>
+        @php
+
+            $var =jdate();
+
+            echo "today day of :". $var->getDayOfWeek();
+            echo jdate()->subDays($var->getDayOfWeek());
+
+
+        @endphp
+        <hr>
+        {{  Morilog\Jalali\Jalalian::fromDateTime('yesterday')->subMonths(1)->format('Y-m-d')}}
         <div class="row">
             @foreach ($news as $new)
                 <div class="col-12 mb-5">
