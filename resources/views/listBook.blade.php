@@ -2,7 +2,7 @@
 @section ('content')
     <div class="position-relative overflow-hidden  text-center bg-light border border-dark">
         <div class="col-md-5 p-lg-5 mx-auto my-5">
-            <h1 class="display-4 font-weight-normal">{{$list->name}}</h1>
+            <h1 class="display-4 font-weight-normal">{{$list->name}} - {{$list->books_count}}</h1>
             <p class="lead font-weight-normal" align="center">
                 {{$list->description}}
             </p>
@@ -79,35 +79,35 @@
             </div>
         @endif
         <div class="row mb-2">
-            @foreach($list->books as $book)
-                <div class="col-md-4">
-                    <div class="card flex-md-row mb-4 box-shadow h-md-250">
+{{--            @foreach($list->books as $book)--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <div class="card flex-md-row mb-4 box-shadow h-md-250">--}}
 
-                        <div class="card-body d-flex flex-column align-items-start">
-                            <div>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <h5 class="mb-0">
-                                <a class="text-dark" href="#">{{$book->name}}</a>
-                            </h5>
-                            <smal>نویسنده :</smal>
-                            <div class="float-right">
-                                {{$book->author}}
-                            </div>
-                            <a href="/showBook/{{$book->id}}">بیشتر</a>
-                            <div class="bottom pr-2 pb-2">{{jdate($book->created_at)->ago()}}</div>
-                        </div>
+{{--                        <div class="card-body d-flex flex-column align-items-start">--}}
+{{--                            <div>--}}
+{{--                                <span class="fa fa-star checked"></span>--}}
+{{--                                <span class="fa fa-star checked"></span>--}}
+{{--                                <span class="fa fa-star checked"></span>--}}
+{{--                                <span class="fa fa-star"></span>--}}
+{{--                                <span class="fa fa-star"></span>--}}
+{{--                            </div>--}}
+{{--                            <h5 class="mb-0">--}}
+{{--                                <a class="text-dark" href="#">{{$book->name}}</a>--}}
+{{--                            </h5>--}}
+{{--                            <smal>نویسنده :</smal>--}}
+{{--                            <div class="float-right">--}}
+{{--                                {{$book->author}}--}}
+{{--                            </div>--}}
+{{--                            <a href="/showBook/{{$book->id}}">بیشتر</a>--}}
+{{--                            <div class="bottom pr-2 pb-2">{{jdate($book->created_at)->ago()}}</div>--}}
+{{--                        </div>--}}
 
-                        <a href="/showBook/{{$book->id}}">
-                            <img src="/book-image/{{$book->image}}" class="card-img-right">
-                        </a>
-                    </div>
-                </div>
-            @endforeach
+{{--                        <a href="/showBook/{{$book->id}}">--}}
+{{--                            <img src="/book-image/{{$book->image}}" class="card-img-right">--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            @endforeach--}}
         </div>
 
 @endsection

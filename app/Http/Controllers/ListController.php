@@ -14,9 +14,7 @@ class ListController extends Controller
     {
 
 
-            $lists = ListBook::all();
-
-
+        $lists = ListBook::all();
 
 
         return view('List', compact('lists'));
@@ -25,33 +23,31 @@ class ListController extends Controller
     public function listBook($id)
     {
 
-
         if (request('new')) {
-            $list = ListBook::whereId($id)->with(['books' => function($query){
-                $query->orderBy('created_at','desc');
+            $list = ListBook::whereId($id)->with(['books' => function ($query) {
+                $query->orderBy('created_at', 'desc');
             }])->first();
 
-        }
-        // elseif (request('favorite')){
-        //     $list = ListBook::find($id)->orderBy('')
-        // }
-        else
-            $list = ListBook::find($id);
-// dd($list);
+        } else
+//            $list = ListBook::find($id);
+//            $list = ListBook::find($id)->with('books')->get();
+            $list = ListBook::find($id)->withCount('books')->first();
+//        $list = $list->first();
+//dd($list);
         return view('listBook', compact('list'));
     }
 
     public function store(Request $request)
     {
 
-        $file  = $request->file('image');
+        $file = $request->file('image');
         $image = time() . '.' . $file->getClientOriginalExtension();
         // $file->move(public_path('/list-image/'), $image);
         Image::make($file)->resize(300, 300)->save(public_path('/list-image/') . $image, 100);
         ListBook::create([
-            'name'        => $request->name,
+            'name' => $request->name,
             'description' => $request->description,
-            'image'       => $image,
+            'image' => $image,
         ]);
 
         return back();
