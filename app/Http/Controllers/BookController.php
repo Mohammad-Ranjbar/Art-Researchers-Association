@@ -24,6 +24,8 @@ class BookController extends Controller
 
         $news = News::orderBy('created_at', 'desc')->get()->take(3);
         $forums = Forum::orderBy('created_at', 'desc')->get()->take(3);
+//        session()->put('basket_session',[['product_id' => 2 , 'price' => 2000],['product_id' => 4 , 'price' => 3000]]);
+        dd(request()->session()->get('basket_session'));
         return view('home', compact('books','news','forums'));
 
     }
