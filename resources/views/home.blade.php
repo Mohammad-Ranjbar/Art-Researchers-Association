@@ -38,7 +38,7 @@
         </a>
 
     </div>
-
+    <h3><a href="{{route('temp','1')}}">لینک موقت شما</a></h3>
     <div class="container marketing mt-4">
 
         <h1 class="mb-4" align="center">جدید ترین کتاب ها</h1>

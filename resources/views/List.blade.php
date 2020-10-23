@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('styles')
+    {!! htmlScriptTagJsApi() !!}
+@endsection
 @section ('content')
     <main role="main">
 
@@ -51,7 +54,7 @@
                                         <label for="image">تصویر دسته </label>
                                         <input type="file" class="form-control" name="image" id="image" required>
                                     </div>
-
+                                    {!! htmlFormSnippet() !!}
                                     <button type="submit" class="btn btn-primary">تایید</button>
                                 </form>
                             </div>

@@ -6,6 +6,7 @@ use App\Book;
 use App\Forum;
 use App\ListBook;
 use App\News;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Http\Request;
 use Image;
 class BookController extends Controller
@@ -25,8 +26,19 @@ class BookController extends Controller
         $news = News::orderBy('created_at', 'desc')->get()->take(3);
         $forums = Forum::orderBy('created_at', 'desc')->get()->take(3);
 //        session()->put('basket_session',[['product_id' => 2 , 'price' => 2000],['product_id' => 4 , 'price' => 3000]]);
-        dd(request()->session()->get('basket_session'));
+//        dd(request()->session()->get('basket_session'));
+//        url()->signedRoute('temp',['id',1]);
+//        url()->temporarySignedRoute(
+//            'temp', now()->addMinutes(30), ['id' => 1]
+//        );
+
+//        return URL::temporarySignedRoute(
+//            'temp', now()->addSecond(10), ['id' => 1]
+//        );
+       $url = URL::signedRoute('temp', ['id' => 1]);
+
         return view('home', compact('books','news','forums'));
+
 
     }
 

@@ -5,6 +5,13 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
 Route::get('/test', function () {
     return view('test');
 });
+
+Route::get('/temp/{id}', function (\Illuminate\Http\Request $request) {
+    if (!$request->hasValidSignature()){
+        abort(401);
+    }
+})->name('temp');
+
 Route::get('/', 'BookController@home');
 Route::get('/search', 'BookController@search');
 Route::put('/userEdit', 'HomeController@edit');
@@ -91,3 +98,7 @@ Route::get('/adminPanel/users', 'AdminController@admin_users');
 
 Route::post('/user/{id}', 'AdminController@editUser');
 Route::delete('/user/{id}', 'AdminController@deleteUser');
+
+Route::fallback(function () {
+    return \Illuminate\Support\Facades\Redirect::to('/',301); // انتقال به صفحه اصلی سایت
+});

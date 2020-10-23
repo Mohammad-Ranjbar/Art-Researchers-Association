@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section ('content')
     <div class="position-relative overflow-hidden  text-center bg-light border border-dark">
         <div class="col-md-5 p-lg-5 mx-auto my-5">
