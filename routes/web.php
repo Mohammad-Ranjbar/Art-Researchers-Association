@@ -5,7 +5,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
 Route::get('/test', function () {
     return view('test');
 });
-
+Route::get('/pdf','BookController@pdf');
 Route::get('/temp/{id}', function (\Illuminate\Http\Request $request) {
     if (!$request->hasValidSignature()){
         abort(401);
