@@ -6,7 +6,7 @@ use App\Book;
 use App\Forum;
 use App\ListBook;
 use App\News;
-use Barryvdh\DomPDF\PDF;
+use niklasravnsborg\LaravelPdf\Facades\Pdf;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Http\Request;
 use Image;
@@ -48,11 +48,22 @@ class BookController extends Controller
 
     public function pdf()
     {
+//        $data = [
+//            'foo' => 'bar'
 
-        $pdf = app('dompdf.wrapper');
-        $pdf= $pdf->loadView('pdf');
-        $pdf->save('contracts/file.pdf');
-        return back();
+//        ];
+//        $lists = ListBook::all();
+
+
+
+        $pdf = Pdf::loadView('persian');
+//
+        return $pdf->save('contracts/file1.pdf');
+
+//        $pdf = app('dompdf.wrapper');
+//        $pdf= $pdf->loadView('persian');
+//        $pdf->save('contracts/file.pdf');
+//        return back();
     }
     public function showBook($id)
     {

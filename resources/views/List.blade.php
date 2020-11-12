@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('styles')
-    {!! htmlScriptTagJsApi() !!}
+
 @endsection
 @section ('content')
     <main role="main">
