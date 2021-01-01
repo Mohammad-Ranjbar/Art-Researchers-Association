@@ -24,14 +24,14 @@ class ListController extends Controller
     {
 
         if (request('new')) {
-            $list = ListBook::whereId($id)->with(['books' => function ($query) {
+            $list = ListBook::whereId()->with(['books' => function ($query) {
                 $query->orderBy('created_at', 'desc');
             }])->first();
 
         } else
 //            $list = ListBook::find($id);
 //            $list = ListBook::find($id)->with('books')->get();
-            $list = ListBook::find($id)->withCount('books')->first();
+            $list = ListBook::findOrCreate(['name'=> $id] )->withCount('books')->first();
 //        $list = $list->first();
 //dd($list);
         return view('listBook', compact('list'));
