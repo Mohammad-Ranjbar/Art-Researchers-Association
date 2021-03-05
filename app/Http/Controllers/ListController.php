@@ -14,7 +14,7 @@ class ListController extends Controller
     {
 
 
-        $lists = ListBook::all();
+        $lists = ListBook::paginate(2);
 
 
         return view('List', compact('lists'));

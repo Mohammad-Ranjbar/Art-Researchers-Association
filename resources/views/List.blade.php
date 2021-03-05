@@ -95,6 +95,42 @@
 
                     @endforeach
                 </div>
+                @php
+                    $link_limit = 6;
+                @endphp
+                @if ($lists->lastPage() > 1)
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="pagination">
+                                <li class="{{ ($lists->currentPage() == 1) ? ' disabled' : '' }}">
+                                    <a href="{{ $lists->url(1) }}">First</a>
+                                </li>
+                                @for ($i = 1; $i <= $lists->lastPage(); $i++)
+                                    <?php
+                                    $half_total_links = floor($link_limit / 2);
+                                    $from = $lists->currentPage() - $half_total_links;
+                                    $to = $lists->currentPage() + $half_total_links;
+                                    if ($lists->currentPage() < $half_total_links) {
+                                        $to += $half_total_links - $lists->currentPage();
+                                    }
+                                    if ($lists->lastPage() - $lists->currentPage() < $half_total_links) {
+                                        $from -= $half_total_links - ($lists->lastPage() - $lists->currentPage()) - 1;
+                                    }
+                                    ?>
+                                    @if ($from < $i && $i < $to)
+                                        <li class="{{ ($lists->currentPage() == $i) ? ' active' : '' }}">
+                                            <a href="{{ $lists->url($i) }}">{{ $i }}</a>
+                                        </li>
+                                    @endif
+                                @endfor
+                                <li class="{{ ($lists->currentPage() == $lists->lastPage()) ? ' disabled' : '' }}">
+                                    <a href="{{ $lists->url($lists->lastPage()) }}">Last</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                @endif
             </div>
         </div>
 
